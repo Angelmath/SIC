@@ -253,7 +253,15 @@ public final class paneles extends javax.swing.JFrame {
         jLabel15.setLocation(((d.width-60)) - (jLabel15.getWidth()), jLabel15.getY());
         jLabel15.setText(/*moni1.getNombre()*/"");
         jLabel17.setLocation(((d.width-60)) - (jLabel17.getWidth()), jLabel17.getY());
-               
+        nav.setSize(160, d.height-60);
+        panel_busqueda1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_diseño1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_guardia1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_rrhh1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_guardia1.setLocation((d.width-60)-panel_guardia1.getWidth()*2,(d.height-60)-panel_guardia1.getHeight()*2);
+        panel_rrhh1.setLocation((d.width-60)-panel_guardia1.getWidth()*2, (d.height-60)-panel_guardia1.getHeight());
+        panel_diseño1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight()*2);
+        panel_busqueda1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight());  
         
     }
     
@@ -1961,14 +1969,14 @@ public final class paneles extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        nav = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         panel_busqueda1 = new sgi.acceso.panel_busqueda();
         panel_guardia1 = new sgi.acceso.panel_guardia();
         panel_rrhh1 = new sgi.acceso.panel_rrhh();
-        panel_busqueda2 = new sgi.acceso.panel_busqueda();
+        panel_diseño1 = new sgi.acceso.panel_diseño();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Access IC");
@@ -2026,48 +2034,47 @@ public final class paneles extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 60);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.setLayout(null);
+        nav.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        nav.setLayout(null);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1);
+        nav.add(jComboBox1);
         jComboBox1.setBounds(0, 20, 160, 40);
 
         jButton1.setText("jButton1");
-        jPanel1.add(jButton1);
+        nav.add(jButton1);
         jButton1.setBounds(0, 530, 160, 40);
 
         jButton2.setText("jButton1");
-        jPanel1.add(jButton2);
+        nav.add(jButton2);
         jButton2.setBounds(0, 480, 160, 40);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 60, 160, 590);
+        getContentPane().add(nav);
+        nav.setBounds(0, 60, 190, 590);
 
-        panel_busqueda1.setBackground(new java.awt.Color(51, 255, 51));
+        panel_busqueda1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout panel_busqueda1Layout = new javax.swing.GroupLayout(panel_busqueda1);
         panel_busqueda1.setLayout(panel_busqueda1Layout);
         panel_busqueda1Layout.setHorizontalGroup(
             panel_busqueda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 368, Short.MAX_VALUE)
         );
         panel_busqueda1Layout.setVerticalGroup(
             panel_busqueda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 258, Short.MAX_VALUE)
         );
 
         getContentPane().add(panel_busqueda1);
-        panel_busqueda1.setBounds(160, 320, 390, 260);
+        panel_busqueda1.setBounds(560, 320, 370, 260);
 
-        panel_guardia1.setBackground(new java.awt.Color(51, 51, 255));
         panel_guardia1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout panel_guardia1Layout = new javax.swing.GroupLayout(panel_guardia1);
         panel_guardia1.setLayout(panel_guardia1Layout);
         panel_guardia1Layout.setHorizontalGroup(
             panel_guardia1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
+            .addGap(0, 368, Short.MAX_VALUE)
         );
         panel_guardia1Layout.setVerticalGroup(
             panel_guardia1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2075,39 +2082,39 @@ public final class paneles extends javax.swing.JFrame {
         );
 
         getContentPane().add(panel_guardia1);
-        panel_guardia1.setBounds(160, 60, 400, 260);
+        panel_guardia1.setBounds(190, 60, 370, 260);
 
-        panel_rrhh1.setBackground(new java.awt.Color(255, 51, 51));
+        panel_rrhh1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout panel_rrhh1Layout = new javax.swing.GroupLayout(panel_rrhh1);
         panel_rrhh1.setLayout(panel_rrhh1Layout);
         panel_rrhh1Layout.setHorizontalGroup(
             panel_rrhh1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 368, Short.MAX_VALUE)
         );
         panel_rrhh1Layout.setVerticalGroup(
             panel_rrhh1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 258, Short.MAX_VALUE)
         );
 
         getContentPane().add(panel_rrhh1);
-        panel_rrhh1.setBounds(560, 60, 420, 260);
+        panel_rrhh1.setBounds(190, 320, 370, 260);
 
-        panel_busqueda2.setBackground(new java.awt.Color(255, 255, 0));
+        panel_diseño1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout panel_busqueda2Layout = new javax.swing.GroupLayout(panel_busqueda2);
-        panel_busqueda2.setLayout(panel_busqueda2Layout);
-        panel_busqueda2Layout.setHorizontalGroup(
-            panel_busqueda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
+        javax.swing.GroupLayout panel_diseño1Layout = new javax.swing.GroupLayout(panel_diseño1);
+        panel_diseño1.setLayout(panel_diseño1Layout);
+        panel_diseño1Layout.setHorizontalGroup(
+            panel_diseño1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 368, Short.MAX_VALUE)
         );
-        panel_busqueda2Layout.setVerticalGroup(
-            panel_busqueda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 270, Short.MAX_VALUE)
+        panel_diseño1Layout.setVerticalGroup(
+            panel_diseño1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 258, Short.MAX_VALUE)
         );
 
-        getContentPane().add(panel_busqueda2);
-        panel_busqueda2.setBounds(570, 320, 470, 270);
+        getContentPane().add(panel_diseño1);
+        panel_diseño1.setBounds(560, 60, 370, 260);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -3926,9 +3933,9 @@ public final class paneles extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel nav;
     private sgi.acceso.panel_busqueda panel_busqueda1;
-    private sgi.acceso.panel_busqueda panel_busqueda2;
+    private sgi.acceso.panel_diseño panel_diseño1;
     private sgi.acceso.panel_guardia panel_guardia1;
     private sgi.acceso.panel_rrhh panel_rrhh1;
     // End of variables declaration//GEN-END:variables
