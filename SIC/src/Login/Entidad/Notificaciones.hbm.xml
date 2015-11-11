@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/11/2014 15:01:25 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Login.Entidad.Notificaciones" table="notificaciones" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+              <generator class="sequence">
+                <param name="sequence">notificaciones_id_seq</param>
+              </generator>
+        </id>
+        <property name="informacion" type="string">
+            <column name="informacion" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="29" />
+        </property>
+        <property name="visto" type="string">
+            <column name="visto" />
+        </property>
+        <property name="responsable" type="string">
+            <column name="responsable" />
+        </property>
+        <property name="modulo" type="string">
+            <column name="modulo" />
+        </property>
+        <property name="instalacion" type="string">
+            <column name="instalacion" />
+        </property>
+    </class>
+</hibernate-mapping>

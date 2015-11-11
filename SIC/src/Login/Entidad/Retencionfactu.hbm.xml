@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/05/2014 06:20:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Retencionfactu" schema="public" table="retencionfactu">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">retencionfactu_id_seq</param>
+      </generator>
+    </id>
+    <property name="sri" type="string">
+      <column name="sri"/>
+    </property>
+    <property name="idnombre" type="string">
+      <column name="idnombre"/>
+    </property>
+    <property name="valor1" type="string">
+      <column name="valor1"/>
+    </property>
+    <property name="valor2" type="string">
+      <column name="valor2"/>
+    </property>
+    <property name="valor8" type="string">
+      <column name="valor8"/>
+    </property>
+    <property name="valor10" type="string">
+      <column name="valor10"/>
+    </property>
+    <property name="valor30" type="string">
+      <column name="valor30"/>
+    </property>
+    <property name="valor70" type="string">
+      <column name="valor70"/>
+    </property>
+    <property name="valor100" type="string">
+      <column name="valor100"/>
+    </property>
+    <property name="total" type="string">
+      <column name="total"/>
+    </property>
+    <property name="fecha" type="date">
+      <column name="fecha"/>
+    </property>
+    
+  </class>
+</hibernate-mapping>

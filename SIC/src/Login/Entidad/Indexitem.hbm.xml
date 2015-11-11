@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/05/2014 06:20:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Indexitem" schema="public" table="indexitem">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">indexitem_id_seq</param>
+      </generator>
+    </id>
+    <property name="fecha" type="date">
+      <column name="fecha"/>
+    </property>
+    <property name="tipo" type="string">
+      <column name="tipo"/>
+    </property>
+    <property name="tipoa" type="string">
+      <column name="tipoa"/>
+    </property>
+    <property name="tipob" type="string">
+      <column name="tipob"/>
+    </property>
+    <property name="tipoc" type="string">
+      <column name="tipoc"/>
+    </property>
+    <property name="tipod" type="string">
+      <column name="tipod"/>
+    </property>
+    <property name="tipoe" type="string">
+      <column name="tipoe"/>
+    </property>
+    <property name="tipof" type="string">
+      <column name="tipof"/>
+    </property>
+    <property name="tipog" type="string">
+      <column name="tipog"/>
+    </property>
+    <property name="formula" type="string">
+      <column name="formula"/>
+    </property>
+    <property name="categoria" type="string">
+      <column name="categoria"/>
+    </property>
+    <property name="inf1" type="string">
+      <column name="inf1"/>
+    </property>
+    <property name="inf2" type="string">
+      <column name="inf2"/>
+    </property>
+    <property name="sup1" type="string">
+      <column name="sup1"/>
+    </property>
+    <property name="sup2" type="string">
+      <column name="sup2"/>
+    </property>
+  </class>
+</hibernate-mapping>

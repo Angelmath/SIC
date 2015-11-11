@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Ticker" table="ticker" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">ticker_id_seq</param>
+            </generator>
+        </id>
+        <property name="contenido" type="string">
+            <column name="contenido" />
+        </property>
+        <property name="repeticiones" type="string">
+            <column name="repeticiones" />
+        </property>
+        <property name="frecuencia" type="string">
+            <column name="frecuencia" />
+        </property>
+        <property name="punto" type="string">
+            <column name="punto" />
+        </property>
+        <property name="nivel" type="string">
+            <column name="nivel" />
+        </property>
+    </class>
+</hibernate-mapping>

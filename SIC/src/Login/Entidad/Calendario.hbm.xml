@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/04/2015 15:59:08 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Login.Entidad.Calendario" table="calendario" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">calendario_id_seq</param>
+              </generator>
+        </id>
+        <many-to-one name="caldepartamento" class="Login.Entidad.Caldepartamento" lazy="false" fetch="select">
+            <column name="idcaldepartamento" not-null="true" />
+        </many-to-one>
+        <many-to-one name="login" class="Login.Entidad.Login" lazy="false" fetch="select">
+            <column name="idlogin" not-null="true" />
+        </many-to-one>
+        <property name="fechaini" type="date">
+            <column name="fechaini" length="13" />
+        </property>
+        <property name="fechafin" type="date">
+            <column name="fechafin" length="13" />
+        </property>
+        <property name="titulo" type="string">
+            <column name="titulo" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        <property name="hour" type="string">
+            <column name="hour" />
+        </property>
+        <property name="allhour" type="string">
+            <column name="allhour" />
+        </property>
+        <property name="visible" type="string">
+            <column name="visible" />
+        </property>
+        <property name="vinculos" type="string">
+            <column name="vinculos" />
+        </property>
+    </class>
+</hibernate-mapping>

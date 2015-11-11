@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/09/2014 12:28:23 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="monitoreo.Entidad.Orden" table="orden" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="detalle" type="string">
+            <column name="detalle" />
+        </property>
+        <property name="tiempo" type="string">
+            <column name="tiempo" />
+        </property>
+        <property name="puntomonitoreo" type="java.lang.Integer">
+            <column name="puntomonitoreo" />
+        </property>
+    </class>
+</hibernate-mapping>

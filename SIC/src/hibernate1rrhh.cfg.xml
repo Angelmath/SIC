@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost/acceso</property>-->
+    <property name="hibernate.connection.url">jdbc:postgresql://181.198.26.33:5432/acceso</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">cajamarca-2013</property>
+    <property name="hibernate.jdbc.use_get_generated_keys">true</property>
+    <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+    <property name="hibernate.c3p0.min_size">1</property>
+    <property name="hibernate.c3p0.max_size">2</property>
+    <property name="hibernate.c3p0.timeout">480</property>
+    <property name="hibernate.c3p0.validate">false</property>
+    <property name="current_session_context_class">thread</property>
+    <property name="hiberenate.show_sql">false</property>
+    <property name="hbm2ddl.auto">validate</property>
+    
+    <mapping resource="rrhh/Entidad2/Monitor.hbm.xml"/>
+    <mapping resource="rrhh/Entidad2/Usuario.hbm.xml"/>
+    <mapping resource="rrhh/Entidad2/EmpresaVehiculo.hbm.xml"/>
+    <mapping resource="rrhh/Entidad2/Horarios.hbm.xml"/>
+    <mapping resource="rrhh/Entidad2/Vehiculo.hbm.xml"/>
+    <mapping resource="rrhh/Entidad2/Acreditacion.hbm.xml"/>
+    <mapping resource="rrhh/Entidad2/Asistencia.hbm.xml"/>
+    <mapping resource="rrhh/Entidad2/Registros.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

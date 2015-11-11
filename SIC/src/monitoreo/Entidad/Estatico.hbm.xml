@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/09/2014 12:28:23 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="monitoreo.Entidad.Estatico" table="estatico" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreVariable" type="string">
+            <column name="nombre_variable" />
+        </property>
+        <property name="condicion" type="string">
+            <column name="condicion" />
+        </property>
+        <property name="valor" type="string">
+            <column name="valor" />
+        </property>
+    </class>
+</hibernate-mapping>

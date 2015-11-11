@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/03/2014 02:47:47 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Instalacion" schema="public" table="instalacion">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">instalacion_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one name="clientes" class="Login.Entidad.Clientes" fetch="select">
+            <column name="idcliente" />
+    </many-to-one>
+    <many-to-one name="ticket" class="Login.Entidad.Ticket" fetch="select">
+            <column name="tick" />
+    </many-to-one>
+    <property name="direccion" type="string">
+      <column name="direccion"/>
+    </property>
+    <property name="notificaciones" type="string">
+      <column name="notificaciones"/>
+    </property>
+    <property name="materiales" type="string">
+      <column name="materiales"/>
+    </property>
+    <property name="ciudad" type="string">
+      <column name="ciudad"/>
+    </property>
+    <property name="detalle" type="string">
+      <column name="detalle"/>
+    </property>
+    <property name="pendiente" type="string">
+      <column name="pendiente"/>
+    </property>
+     <property name="fechafin" type="string">
+      <column name="fechafin"/>
+    </property>
+    <property name="fecha" type="string">
+      <column name="fecha"/>
+    </property>
+    <property name="proceso" type="string">
+      <column name="proceso"/>
+    </property>
+    <property name="tipo" type="string">
+      <column name="tipo"/>
+    </property>
+    <property name="selectt" type="string">
+      <column name="selectt"/>
+    </property>
+    <property name="grupo" type="string">
+      <column name="grupo"/>
+    </property>
+    <property name="ticket_1" type="string">
+      <column name="ticket"/>
+    </property>
+    <property name="fechafactu" type="date">
+      <column name="fechafactu"/>
+    </property>
+    <property name="fechafininsta" type="date">
+      <column name="fechafininsta"/>
+    </property>
+    <property name="fechafactufin" type="date">
+      <column name="fechafactufin"/>
+    </property>
+    <property name="fechacance" type="date">
+      <column name="fechacance"/>
+    </property>
+    <property name="fechaanticipo" type="date">
+      <column name="fechaanticipo"/>
+    </property>
+    <property name="permiso" type="string">
+      <column name="permiso"/>
+    </property>
+  </class>
+</hibernate-mapping>

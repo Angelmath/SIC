@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/03/2015 16:39:49 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Bitacora.tablas.Acreditacion" table="acreditacion" schema="public">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="sequence">
+              <param name="sequence">acreditacion_id_seq</param>
+            </generator>
+          </id>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="100" />
+        </property>
+        <set name="usuarios" inverse="true">
+            <key>
+                <column name="id_acreditacion" />
+            </key>
+            <one-to-many class="Bitacora.tablas.Usuario" />
+        </set>
+    </class>
+</hibernate-mapping>

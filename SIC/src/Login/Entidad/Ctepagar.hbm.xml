@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/05/2014 06:20:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Ctepagar" schema="public" table="ctepagar">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">ctepagar_id_seq</param>
+      </generator>
+    </id>
+    <property name="detalle" type="string">
+      <column name="detalle"/>
+    </property>
+    <property name="fecha" type="string">
+      <column name="fecha"/>
+    </property>
+    <property name="valor" type="string">
+      <column name="valor"/>
+    </property>
+    <property name="total" type="string">
+      <column name="total"/>
+    </property>
+    <property name="instalacion" type="string">
+      <column name="instalacion"/>
+    </property>
+    <property name="idinstalacion" type="string">
+      <column name="idinstalacion"/>
+    </property>
+    <property name="cliente" type="string">
+      <column name="cliente"/>
+    </property>
+    <property name="idcliente" type="string">
+      <column name="idcliente"/>
+    </property>
+    <property name="dias" type="string">
+      <column name="dias"/>
+    </property>
+  </class>
+</hibernate-mapping>

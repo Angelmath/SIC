@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.MedicaProfesional" schema="public" table="medica_profesional">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">medica_profesional_id_seq</param>
+      </generator>
+    </id>
+    <property name="ci" type="java.lang.Integer">
+      <column name="ci"/>
+    </property>
+    <property name="fecha" type="timestamp">
+      <column length="29" name="fecha"/>
+    </property>
+    <property name="empresa" type="string">
+      <column name="empresa"/>
+    </property>
+    <property name="diagnostico" type="string">
+      <column name="diagnostico"/>
+    </property>
+    <property name="friesgo" type="string">
+      <column name="friesgo"/>
+    </property>
+    <property name="agriesgo" type="string">
+      <column name="agriesgo"/>
+    </property>
+  </class>
+</hibernate-mapping>

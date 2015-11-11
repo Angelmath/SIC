@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="rrhh"/>
+  <table-filter match-name="horas"/>
+  <table-filter match-name="anticipos"/>
+  <table-filter match-name="medica"/>
+  <table-filter match-name="prestamos"/>
+  <table-filter match-name="empleado"/>
+  <table-filter match-name="medica_profesional"/>
+  <table-filter match-name="bono"/>
+  <table-filter match-name="comisiones"/>
+  <table-filter match-name="cv_adicional"/>
+  <table-filter match-name="dept_empl"/>
+  <table-filter match-name="multa"/>
+  <table-filter match-name="cv_laboral"/>
+  <table-filter match-name="cuentas"/>
+  <table-filter match-name="departamento"/>
+  <table-filter match-name="evaluacion"/>
+  <table-filter match-name="users"/>
+  <table-filter match-name="cv_idioma"/>
+  <table-filter match-name="cv_referencia"/>
+  <table-filter match-name="cv_estudio"/>
+  <table-filter match-name="roles"/>
+  <table-filter match-name="fondosreserva"/>
+  <table-filter match-name="pruebasf"/>
+  <table-filter match-name="alimentacion"/>
+  <table-filter match-name="otros"/>
+  <table-filter match-name="permisos"/>
+</hibernate-reverse-engineering>

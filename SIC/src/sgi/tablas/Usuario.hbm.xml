@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Usuario" table="usuario" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">usuario_id_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="vehiculo" class="sgi.tablas.Vehiculo" fetch="select">
+            <column name="idvehiculo" />
+        </many-to-one>
+        <property name="ci" type="string">
+            <column name="ci" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" />
+        </property>
+        <property name="destino" type="string">
+            <column name="destino" />
+        </property>
+        <property name="materiales" type="string">
+            <column name="materiales" />
+        </property>
+        <property name="inicioObservacion" type="string">
+            <column name="inicio_observacion" />
+        </property>
+        <property name="finObservacion" type="string">
+            <column name="fin_observacion" />
+        </property>
+        <set name="registroses" table="registros" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idusuario" />
+            </key>
+            <one-to-many class="sgi.tablas.Registros" />
+        </set>
+    </class>
+</hibernate-mapping>

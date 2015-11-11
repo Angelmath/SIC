@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/03/2014 02:47:47 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Indexpresupuesto" schema="public" table="indexpresupuesto">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">indexpresupuesto_id_seq</param>
+      </generator>
+    </id>
+    <property name="presupuesto" type="string">
+      <column name="presupuesto"/>
+    </property>
+     <property name="monto" type="string">
+      <column name="monto"/>
+    </property>
+    <property name="mes" type="string">
+      <column name="mes"/>
+    </property>
+    <property name="anio" type="string">
+      <column name="anio"/>
+    </property>
+    
+  </class>
+</hibernate-mapping>
+

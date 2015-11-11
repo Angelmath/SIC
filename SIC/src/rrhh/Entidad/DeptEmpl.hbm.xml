@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.DeptEmpl" schema="public" table="dept_empl">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">dept_empl_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="rrhh.Entidad.Departamento" fetch="select"  name="departamento">
+      <column name="depart"/>
+    </many-to-one>
+    <many-to-one class="rrhh.Entidad.Empleado" fetch="select"  name="empleado">
+      <column name="cedula"/>
+    </many-to-one>
+    <set inverse="true" name="empleados">
+      <key>
+        <column name="id_dept"/>
+      </key>
+      <one-to-many class="rrhh.Entidad.Empleado"/>
+    </set>
+  </class>
+</hibernate-mapping>

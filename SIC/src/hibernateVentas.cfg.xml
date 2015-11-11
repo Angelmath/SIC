@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost/ventas</property>-->
+    <property name="hibernate.connection.url">jdbc:postgresql://181.198.26.33:5432/ventas</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">cajamarca-2013</property>
+    <property name="hibernate.jdbc.use_get_generated_keys">true</property>
+    <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+    <property name="hibernate.c3p0.min_size">1</property>
+    <property name="hibernate.c3p0.max_size">2</property>
+    <property name="hibernate.c3p0.timeout">480</property>
+    <property name="hibernate.c3p0.validate">false</property>
+    <property name="current_session_context_class">thread</property>
+    <property name="hiberenate.show_sql">false</property>
+    <property name="hbm2ddl.auto">validate</property>
+    <mapping resource="Ventas/Entidad/Login.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/LoginPermisos.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Inventario2.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Inventario3.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Inventario.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Clientes.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Instalacion.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Productos.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Proyectos.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Estatico.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Report.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Diseno.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Factu.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Notas.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Ticket.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Retencion.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Proveedores.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Ctepagar.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Notificaciones.hbm.xml"/>
+    <mapping resource="Ventas/Entidad/Fechactecobrar.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

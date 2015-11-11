@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/03/2014 12:36:59 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Proyectos" schema="public" table="proyectos">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">proyectos_id_seq</param>
+      </generator>
+    </id>
+    <property name="numero" type="string">
+      <column name="numero"/>
+    </property>
+    <property name="aprobacion" type="string">
+      <column name="aprobacion"/>
+    </property>
+    <property name="fecha" type="string">
+      <column name="fecha"/>
+    </property>
+    <property name="total" type="string">
+      <column name="total"/>
+    </property>
+    <property name="contacto" type="string">
+      <column name="contacto"/>
+    </property>
+    <property name="subproyecto" type="string">
+      <column name="subproyecto"/>
+    </property>
+    <property name="razon" type="string">
+      <column name="razon"/>
+    </property>
+    <property name="observacion1" type="string">
+      <column name="observacion1"/>
+    </property>
+    <property name="observacion2" type="string">
+      <column name="observacion2"/>
+    </property>
+    <property name="subtotal" type="string">
+      <column name="subtotal"/>
+    </property>
+    <property name="iva" type="string">
+      <column name="iva"/>
+    </property>
+    <property name="instalacion" type="string">
+      <column name="instalacion"/>
+    </property>
+    <property name="inventario" type="string">
+      <column name="inventario"/>
+    </property>
+    <property name="gmeses" type="string">
+      <column name="gmeses"/>
+    </property>
+    <property name="gtiempo" type="string">
+      <column name="gtiempo"/>
+    </property>
+    <property name="gvalidez" type="string">
+      <column name="gvalidez"/>
+    </property>
+    <property name="grupo" type="string">
+      <column name="grupo"/>
+    </property>
+    <property name="anticipo" type="string">
+      <column name="anticipo"/>
+    </property>
+    <property name="credito" type="string">
+      <column name="credito"/>
+    </property>
+    <property name="diferido" type="string">
+      <column name="diferido"/>
+    </property>
+    <property name="interes" type="string">
+      <column name="interes"/>
+    </property>
+    <property name="aumento" type="string">
+      <column name="aumento"/>
+    </property>
+    <property name="descuento" type="string">
+      <column name="descuento"/>
+    </property>
+
+    
+  </class>
+</hibernate-mapping>

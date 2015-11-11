@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/11/2014 15:45:55 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="rrhh.Entidad.Evaluacion" table="evaluacion" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">evaluacion_id_seq</param>
+            </generator>
+        </id>
+        <property name="campo11" type="string">
+            <column name="campo11" />
+        </property>
+        <property name="campo12" type="string">
+            <column name="campo12" />
+        </property>
+        <property name="campo13" type="string">
+            <column name="campo13" />
+        </property>
+        <property name="campo21" type="string">
+            <column name="campo21" />
+        </property>
+        <property name="campo22" type="string">
+            <column name="campo22" />
+        </property>
+        <property name="campo23" type="string">
+            <column name="campo23" />
+        </property>
+        <property name="campo24" type="string">
+            <column name="campo24" />
+        </property>
+        <property name="campo25" type="string">
+            <column name="campo25" />
+        </property>
+        <property name="campo31" type="string">
+            <column name="campo31" />
+        </property>
+        <property name="campo32" type="string">
+            <column name="campo32" />
+        </property>
+        <property name="campo33" type="string">
+            <column name="campo33" />
+        </property>
+        <property name="campo41" type="string">
+            <column name="campo41" />
+        </property>
+        <property name="campo42" type="string">
+            <column name="campo42" />
+        </property>
+        <property name="campo43" type="string">
+            <column name="campo43" />
+        </property>
+        <property name="campo44" type="string">
+            <column name="campo44" />
+        </property>
+        <property name="campo51" type="string">
+            <column name="campo51" />
+        </property>
+        <property name="campo52" type="string">
+            <column name="campo52" />
+        </property>
+        <property name="campo53" type="string">
+            <column name="campo53" />
+        </property>
+        <property name="campo61" type="string">
+            <column name="campo61" />
+        </property>
+        <property name="campo62" type="string">
+            <column name="campo62" />
+        </property>
+        <property name="campo63" type="string">
+            <column name="campo63" />
+        </property>
+        <property name="ci" type="string">
+            <column name="ci" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="13" />
+        </property>
+    </class>
+</hibernate-mapping>

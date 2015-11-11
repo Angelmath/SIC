@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Foto" table="foto" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">foto_id_seq</param>
+            </generator>
+        </id>
+        <property name="foto" type="string">
+            <column name="foto" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" />
+        </property>
+        <property name="usuario" type="string">
+            <column name="usuario" />
+        </property>
+        <property name="vehiculo" type="string">
+            <column name="vehiculo" />
+        </property>
+        <property name="pendiente" type="string">
+            <column name="pendiente" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 28/08/2014 03:32:25 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Login.Entidad.Materiales" table="materiales" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+              <generator class="sequence">
+                <param name="sequence">materiales_id_seq</param>
+              </generator>
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" />
+        </property>
+        <property name="orden" type="string">
+            <column name="orden" />
+        </property>
+        <property name="inicio" type="date">
+            <column name="inicio" />
+        </property>
+        <property name="fin" type="date">
+            <column name="fin" />
+        </property>
+        <property name="aprobado" type="string">
+            <column name="aprobado" />
+        </property>
+        <property name="ordentrabajo" type="string">
+            <column name="ordentrabajo" />
+        </property>
+    </class>
+</hibernate-mapping>

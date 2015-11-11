@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Login" table="login" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">login_id_seq</param>
+            </generator>
+        </id>
+        <property name="usuario" type="string">
+            <column name="usuario" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" />
+        </property>
+        <property name="contrasenia" type="string">
+            <column name="contrasenia" />
+        </property>
+        <property name="dispositivo" type="string">
+            <column name="dispositivo" />
+        </property>
+        <property name="ci" type="string">
+            <column name="ci" />
+        </property>
+        <property name="idnivel" type="java.lang.Integer">
+            <column name="idnivel" />
+        </property>
+    </class>
+</hibernate-mapping>

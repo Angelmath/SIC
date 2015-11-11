@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/04/2015 15:59:08 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Login.Entidad.Alertas" table="alertas" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="tipo" type="string">
+            <column name="tipo" />
+        </property>
+        <property name="desccripcion" type="string">
+            <column name="desccripcion" />
+        </property>
+    </class>
+</hibernate-mapping>

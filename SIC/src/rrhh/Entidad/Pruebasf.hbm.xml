@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 06/11/2014 15:33:01 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.Pruebasf" schema="public" table="pruebasf">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">pruebasf_id_seq</param>
+      </generator>
+    </id>
+    <property name="ci" type="string">
+      <column name="ci"/>
+    </property>
+    <property name="trote" type="string">
+      <column name="trote"/>
+    </property>
+    <property name="flexionesp" type="string">
+      <column name="flexionesp"/>
+    </property>
+    <property name="barras" type="string">
+      <column name="barras"/>
+    </property>
+    <property name="abdominales" type="string">
+      <column name="abdominales"/>
+    </property>
+    <property name="sentadillas" type="string">
+      <column name="sentadillas"/>
+    </property>
+    <property name="cabo" type="string">
+      <column name="cabo"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="13" name="fecha"/>
+    </property>
+  </class>
+</hibernate-mapping>

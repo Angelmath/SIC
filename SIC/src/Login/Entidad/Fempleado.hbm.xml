@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28/03/2014 02:37:09 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Fempleado" schema="public" table="fempleado">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">fempleado_id_seq</param>
+      </generator>
+    </id>
+    <property name="ci" type="string">
+      <column name="ci"/>
+    </property>
+    <property name="nombre" type="string">
+      <column name="nombre"/>
+    </property>
+    <property name="apellido" type="string">
+      <column name="apellido"/>
+    </property>
+    <property name="departamento" type="string">
+      <column name="departamento"/>
+    </property>
+    <property name="cargo" type="string">
+      <column name="cargo"/>
+    </property>
+    <property name="cargo2" type="string">
+      <column name="cargo2"/>
+    </property>
+    <property name="porcentaje" type="string">
+      <column name="porcentaje"/>
+    </property>
+    <property name="valor" type="string">
+      <column name="valor"/>
+    </property>
+    <property name="dias" type="string">
+      <column name="dias"/>
+    </property>
+    <property name="idfcomisiones" type="string">
+      <column name="idfcomisiones"/>
+    </property>
+  </class>
+</hibernate-mapping>

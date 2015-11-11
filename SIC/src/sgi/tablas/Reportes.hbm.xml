@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Reportes" table="reportes" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">reportes_id_seq</param>
+            </generator>
+        </id>
+        <property name="idlogin" type="java.lang.Integer">
+            <column name="idlogin" />
+        </property>
+        <property name="dispositivo" type="string">
+            <column name="dispositivo" />
+        </property>
+        <property name="inicio" type="timestamp">
+            <column name="inicio" length="29" />
+        </property>
+        <property name="fin" type="timestamp">
+            <column name="fin" length="29" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" />
+        </property>
+    </class>
+</hibernate-mapping>

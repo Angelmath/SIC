@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost/ventas</property>-->
+    <property name="hibernate.connection.url">jdbc:postgresql://181.198.26.33:5432/ventas</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">cajamarca-2013</property>
+    <property name="hibernate.jdbc.use_get_generated_keys">true</property>
+    <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+    <property name="hibernate.c3p0.min_size">1</property>
+    <property name="hibernate.c3p0.max_size">2</property>
+    <property name="hibernate.c3p0.timeout">480</property>
+    <property name="hibernate.c3p0.validate">false</property>
+    <property name="current_session_context_class">thread</property>
+    <property name="hiberenate.show_sql">false</property>
+    <property name="hbm2ddl.auto">validate</property>
+    <mapping resource="Login/Entidad/Login.hbm.xml"/>
+    <mapping resource="Login/Entidad/Inventario2.hbm.xml"/>
+    <mapping resource="Login/Entidad/Inventario3.hbm.xml"/>
+    <mapping resource="Login/Entidad/Inventario.hbm.xml"/>
+    <mapping resource="Login/Entidad/Clientes.hbm.xml"/>
+    <mapping resource="Login/Entidad/Instalacion.hbm.xml"/>
+    <mapping resource="Login/Entidad/Productos.hbm.xml"/>
+    <mapping resource="Login/Entidad/Proyectos.hbm.xml"/>
+    <mapping resource="Login/Entidad/Estatico.hbm.xml"/>
+    <mapping resource="Login/Entidad/Report.hbm.xml"/>
+    <mapping resource="Login/Entidad/Orden.hbm.xml"/>
+    <mapping resource="Login/Entidad/Notificaciones.hbm.xml"/>
+    <mapping resource="Login/Entidad/Diseno.hbm.xml"/>
+    <mapping resource="Login/Entidad/Factu.hbm.xml"/>
+    <mapping resource="Login/Entidad/Notas.hbm.xml"/>
+    <mapping resource="Login/Entidad/Ticket.hbm.xml"/>
+    <mapping resource="Login/Entidad/Retencion.hbm.xml"/>
+    <mapping resource="Login/Entidad/Proveedores.hbm.xml"/>
+    <mapping resource="Login/Entidad/Ctepagar.hbm.xml"/>
+    <mapping resource="Login/Entidad/Permisos.hbm.xml"/>
+    <mapping resource="Login/Entidad/LoginPermisos.hbm.xml"/>
+    <mapping resource="Login/Entidad/Items.hbm.xml"/>
+    <mapping resource="Login/Entidad/Materiales.hbm.xml"/>
+    <mapping resource="Login/Entidad/Listamateriales.hbm.xml"/>
+    <mapping resource="Login/Entidad/Factura.hbm.xml"/>
+    <mapping resource="Login/Entidad/Articulos.hbm.xml"/>
+    <mapping resource="Login/Entidad/Ctecobrar.hbm.xml"/>
+    <mapping resource="Login/Entidad/Retencionfactu.hbm.xml"/>
+    <mapping resource="Login/Entidad/Indexitem.hbm.xml"/>
+    <mapping resource="Login/Entidad/Indexpresupuesto.hbm.xml"/>
+    <mapping resource="Login/Entidad/Indexcontable.hbm.xml"/>
+    <mapping resource="Login/Entidad/Presupuesto.hbm.xml"/>
+    <mapping resource="Login/Entidad/Contactos.hbm.xml"/>
+    <mapping resource="Login/Entidad/Caldepartamentoactividad.hbm.xml"/>
+    <mapping resource="Login/Entidad/Alertas.hbm.xml"/>
+    <mapping resource="Login/Entidad/Calactividad.hbm.xml"/>
+    <mapping resource="Login/Entidad/Caldepartamento.hbm.xml"/>
+    <mapping resource="Login/Entidad/Calpermisos.hbm.xml"/>
+    <mapping resource="Login/Entidad/Calendario.hbm.xml"/>
+    <mapping resource="Login/Entidad/Fcomisiones.hbm.xml"/>
+    <mapping resource="Login/Entidad/Fempleado.hbm.xml"/>
+    <mapping resource="Login/Entidad/Fechactecobrar.hbm.xml"/>
+    <mapping resource="Login/Entidad/Noticalen.hbm.xml"/>
+    <mapping resource="Login/Entidad/Owncloud.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

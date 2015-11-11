@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.Cuentas" schema="public" table="cuentas">
+    <id name="ci" type="string">
+      <column name="ci"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column name="nombre"/>
+    </property>
+    <property name="fecha" type="timestamp">
+      <column length="29" name="fecha"/>
+    </property>
+  </class>
+</hibernate-mapping>

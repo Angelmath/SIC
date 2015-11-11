@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.Horas" schema="public" table="horas">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">horas_id_seq</param>
+      </generator>
+    </id>
+    <property name="motivo" type="string">
+      <column name="motivo"/>
+    </property>
+    <property name="detalle" type="string">
+      <column name="detalle"/>
+    </property>
+    <property name="observacion" type="string">
+      <column name="observacion"/>
+    </property>
+    <property name="fecha" type="string">
+      <column name="fecha"/>
+    </property>
+    <property name="tiempo" type="string">
+      <column name="tiempo"/>
+    </property>
+    <property name="valor" type="string">
+      <column name="valor"/>
+    </property>
+    <property name="accion" type="string">
+      <column name="accion"/>
+    </property>
+    <property name="ci" type="string">
+      <column name="ci"/>
+    </property>
+    <property name="mes" type="string">
+      <column name="mes"/>
+    </property>
+    <property name="anio" type="string">
+      <column name="anio"/>
+    </property>
+    <property name="responsable" type="string">
+      <column name="responsable"/>
+    </property>
+  </class>
+</hibernate-mapping>

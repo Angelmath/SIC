@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/03/2014 02:47:47 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Inventario" schema="public" table="inventario">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">inventario_id_seq</param>
+      </generator>
+    </id>
+    <property name="tipo" type="string">
+      <column name="tipo"/>
+    </property>
+    <property name="stv" type="string">
+      <column name="stv"/>
+    </property>
+    <property name="hikvision" type="string">
+      <column name="hikvision"/>
+    </property>
+    <property name="c420tvl" type="string">
+      <column name="c420tvl"/>
+    </property>
+    <property name="c500tvl" type="string">
+      <column name="c500tvl"/>
+    </property>
+    <property name="c550tvl" type="string">
+      <column name="c550tvl"/>
+    </property>
+    <property name="c540tvl" type="string">
+      <column name="c540tvl"/>
+    </property>
+    <property name="c560tvl" type="string">
+      <column name="c560tvl"/>
+    </property>
+    <property name="c570tvl" type="string">
+      <column name="c570tvl"/>
+    </property>
+    <property name="c600tvl" type="string">
+      <column name="c600tvl"/>
+    </property>
+    <property name="c650tvl" type="string">
+      <column name="c650tvl"/>
+    </property>
+    <property name="c700tvl" type="string">
+      <column name="c700tvl"/>
+    </property>
+    <property name="minidomo" type="string">
+      <column name="minidomo"/>
+    </property>
+    <property name="bala" type="string">
+      <column name="bala"/>
+    </property>
+    <property name="domo" type="string">
+      <column name="domo"/>
+    </property>
+    <property name="especial" type="string">
+      <column name="especial"/>
+    </property>
+    <property name="icr" type="string">
+      <column name="icr"/>
+    </property>
+    <property name="ip66" type="string">
+      <column name="ip66"/>
+    </property>
+    <property name="ir" type="string">
+      <column name="ir"/>
+    </property>
+    <property name="irNt" type="string">
+      <column name="ir_nt"/>
+    </property>
+    <property name="luzbaja" type="string">
+      <column name="luzbaja"/>
+    </property>
+    <property name="vari" type="string">
+      <column name="vari"/>
+    </property>
+    <property name="blc" type="string">
+      <column name="blc"/>
+    </property>
+    <property name="wrd" type="string">
+      <column name="wrd"/>
+    </property>
+    <property name="agc" type="string">
+      <column name="agc"/>
+    </property>
+    <property name="awb" type="string">
+      <column name="awb"/>
+    </property>
+    <property name="dnr" type="string">
+      <column name="dnr"/>
+    </property>
+    <property name="vandalismo" type="string">
+      <column name="vandalismo"/>
+    </property>
+    <property name="nota1" type="string">
+      <column name="nota1"/>
+    </property>
+    <property name="nota2" type="string">
+      <column name="nota2"/>
+    </property>
+    <property name="sata" type="string">
+      <column name="sata"/>
+    </property>
+  </class>
+</hibernate-mapping>

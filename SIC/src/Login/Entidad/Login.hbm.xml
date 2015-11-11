@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/03/2014 02:47:47 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Login" schema="public" table="login">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">login_id_seq</param>
+      </generator>
+    </id>
+    <property name="ci" type="string">
+      <column name="ci"/>
+    </property>
+    <property name="usuario" type="string">
+      <column name="usuario"/>
+    </property>
+    <property name="pass" type="string">
+      <column name="pass"/>
+    </property>
+    <property name="nivel" type="string">
+      <column name="nivel"/>
+    </property>
+    <property name="nombre" type="string">
+      <column name="nombre"/>
+    </property>
+    <property name="direccion" type="string">
+      <column name="direccion"/>
+    </property>
+    <property name="direccionrrhh" type="string">
+      <column name="direccionrrhh"/>
+    </property>
+    <property name="descargas" type="string">
+      <column name="descargas"/>
+    </property>
+    <property name="departamento" type="string">
+      <column name="departamento"/>
+    </property>
+    <property name="owncloud" type="string">
+      <column name="owncloud"/>
+    </property>
+    <set inverse="true" name="loginPermisoses">
+      <key>
+        <column name="id_login" not-null="true"/>
+      </key>
+      <one-to-many class="Login.Entidad.LoginPermisos"/>
+    </set>
+  </class>
+</hibernate-mapping>

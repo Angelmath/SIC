@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/03/2014 02:47:47 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Fcomisiones" schema="public" table="fcomisiones">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">fcomisiones_id_seq</param>
+      </generator>
+    </id>
+    <property name="valor1" type="string">
+      <column name="valor1"/>
+    </property>
+    <property name="valor2" type="string">
+      <column name="valor2"/>
+    </property>
+    <property name="diferido" type="string">
+      <column name="diferido"/>
+    </property>
+    <property name="rentabilidad" type="string">
+      <column name="rentabilidad"/>
+    </property>
+    <property name="pendiente" type="string">
+      <column name="pendiente"/>
+    </property>
+    <property name="dias" type="string">
+      <column name="dias"/>
+    </property>
+    <property name="fecha" type="timestamp">
+            <column name="fecha" length="29" />
+    </property>
+    <many-to-one name="clientes" class="Login.Entidad.Clientes"  lazy="false" fetch="select">
+            <column name="idcliente"/>
+    </many-to-one>
+    <many-to-one name="instalacion" class="Login.Entidad.Instalacion"  lazy="false" fetch="select">
+            <column name="idinstalacion"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

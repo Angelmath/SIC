@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.RPall" table="r_pall" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">r_pall_id_seq</param>
+            </generator>
+        </id>
+        <property name="numero" type="string">
+            <column name="numero" />
+        </property>
+        <property name="fecha" type="time">
+            <column name="fecha" length="15" />
+        </property>
+        <property name="horaini" type="string">
+            <column name="horaini" />
+        </property>
+        <property name="horafin" type="string">
+            <column name="horafin" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" />
+        </property>
+        <property name="idfoto" type="java.lang.Integer">
+            <column name="idfoto" />
+        </property>
+        <property name="punto" type="string">
+            <column name="punto" />
+        </property>
+    </class>
+</hibernate-mapping>

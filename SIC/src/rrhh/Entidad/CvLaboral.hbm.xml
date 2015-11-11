@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.CvLaboral" schema="public" table="cv_laboral">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">cv_laboral_id_seq</param>
+      </generator>
+    </id>
+    <property name="cargo" type="string">
+      <column name="cargo"/>
+    </property>
+    <property name="institucion" type="string">
+      <column name="institucion"/>
+    </property>
+    <property name="puesto" type="string">
+      <column name="puesto"/>
+    </property>
+    <property name="funciones" type="string">
+      <column name="funciones"/>
+    </property>
+    <property name="jefe" type="string">
+      <column name="jefe"/>
+    </property>
+    <property name="telefono" type="string">
+      <column name="telefono"/>
+    </property>
+    <property name="cedula" type="string">
+      <column name="cedula"/>
+    </property>
+    <property name="fechaInicio" type="timestamp">
+      <column length="29" name="fecha_inicio"/>
+    </property>
+    <property name="fechaFinal" type="timestamp">
+      <column length="29" name="fecha_final"/>
+    </property>
+  </class>
+</hibernate-mapping>

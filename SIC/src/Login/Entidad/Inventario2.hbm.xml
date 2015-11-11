@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/03/2014 02:47:47 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Inventario2" schema="public" table="inventario2">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">inventario2_id_seq</param>
+      </generator>
+    </id>
+    <property name="stv" type="string">
+      <column name="stv"/>
+    </property>
+    <property name="hikvision" type="string">
+      <column name="hikvision"/>
+    </property>
+    <property name="sata" type="string">
+      <column name="sata"/>
+    </property>
+    <property name="calanes4" type="string">
+      <column name="calanes4"/>
+    </property>
+    <property name="canales8" type="string">
+      <column name="canales8"/>
+    </property>
+    <property name="canales16" type="string">
+      <column name="canales16"/>
+    </property>
+    <property name="cm1de2tb" type="string">
+      <column name="cm1de2tb"/>
+    </property>
+    <property name="cm2de2tb" type="string">
+      <column name="cm2de2tb"/>
+    </property>
+    <property name="cm4de2tb" type="string">
+      <column name="cm4de2tb"/>
+    </property>
+    <property name="cm8de2tb" type="string">
+      <column name="cm8de2tb"/>
+    </property>
+    <property name="pentablex" type="string">
+      <column name="pentablex"/>
+    </property>
+    <property name="vga" type="string">
+      <column name="vga"/>
+    </property>
+    <property name="hdmi" type="string">
+      <column name="hdmi"/>
+    </property>
+    <property name="streams" type="string">
+      <column name="streams"/>
+    </property>
+    <property name="otro" type="string">
+      <column name="otro"/>
+    </property>
+    <property name="tipo" type="string">
+      <column name="tipo"/>
+    </property>
+    <property name="bnc" type="string">
+      <column name="bnc"/>
+    </property>
+    <property name="callmonitor" type="string">
+      <column name="callmonitor"/>
+    </property>
+  </class>
+</hibernate-mapping>

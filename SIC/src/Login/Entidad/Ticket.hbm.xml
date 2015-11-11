@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/04/2014 04:44:32 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Ticket" schema="public" table="ticket">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">ticket_id_seq</param>
+      </generator>
+    </id>
+    <property name="numero" type="string">
+      <column name="numero"/>
+    </property>
+    <property name="diseno" type="string">
+      <column name="diseno"/>
+    </property>
+    <property name="proforma" type="string">
+      <column name="proforma"/>
+    </property>
+    <property name="cliente" type="string">
+      <column name="cliente"/>
+    </property>
+    <property name="proyecto" type="string">
+      <column name="proyecto"/>
+    </property>
+    <property name="direccion" type="string">
+      <column name="direccion"/>
+    </property>
+    <property name="detalle" type="string">
+      <column name="detalle"/>
+    </property>
+    <property name="contacto" type="string">
+      <column name="contacto"/>
+    </property>
+    <property name="estado" type="string">
+      <column name="estado"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/04/2015 15:59:08 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Login.Entidad.Noticalen" table="noticalen" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">Noticalen_id_seq</param>
+              </generator>
+        </id>
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        <property name="visto" type="string">
+            <column name="visto" />
+        </property>
+        <property name="creador" type="string">
+            <column name="creador" />
+        </property>
+        <property name="fecha" type="string">
+            <column name="fecha" />
+        </property>
+        <property name="dueno" type="string">
+            <column name="dueno" />
+        </property>
+        <property name="idcalendario" type="int">
+            <column name="idcalendario" />
+        </property>
+    </class>
+</hibernate-mapping>

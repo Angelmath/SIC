@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.Medica" schema="public" table="medica">
+    <id name="ci" type="int">
+      <column name="ci"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="hta1" type="string">
+      <column name="hta1"/>
+    </property>
+    <property name="hta2" type="string">
+      <column name="hta2"/>
+    </property>
+    <property name="cancer1" type="string">
+      <column name="cancer1"/>
+    </property>
+    <property name="cancer2" type="string">
+      <column name="cancer2"/>
+    </property>
+    <property name="diabetes1" type="string">
+      <column name="diabetes1"/>
+    </property>
+    <property name="diabetes2" type="string">
+      <column name="diabetes2"/>
+    </property>
+    <property name="pisquiatricas1" type="string">
+      <column name="pisquiatricas1"/>
+    </property>
+    <property name="psiquiatricas2" type="string">
+      <column name="psiquiatricas2"/>
+    </property>
+    <property name="coronaria1" type="string">
+      <column name="coronaria1"/>
+    </property>
+    <property name="coronaria2" type="string">
+      <column name="coronaria2"/>
+    </property>
+    <property name="acv1" type="string">
+      <column name="acv1"/>
+    </property>
+    <property name="acv2" type="string">
+      <column name="acv2"/>
+    </property>
+    <property name="asma1" type="string">
+      <column name="asma1"/>
+    </property>
+    <property name="asma2" type="string">
+      <column name="asma2"/>
+    </property>
+    <property name="otras1" type="string">
+      <column name="otras1"/>
+    </property>
+    <property name="otras2" type="string">
+      <column name="otras2"/>
+    </property>
+    <property name="gineG" type="string">
+      <column name="gine_g"/>
+    </property>
+    <property name="gineP" type="string">
+      <column name="gine_p"/>
+    </property>
+    <property name="gineA" type="string">
+      <column name="gine_a"/>
+    </property>
+    <property name="gineC" type="string">
+      <column name="gine_c"/>
+    </property>
+    <property name="ginePf" type="string">
+      <column name="gine_pf"/>
+    </property>
+    <property name="menarquia" type="string">
+      <column name="menarquia"/>
+    </property>
+    <property name="menacmia" type="string">
+      <column name="menacmia"/>
+    </property>
+    <property name="quirurgicos" type="string">
+      <column name="quirurgicos"/>
+    </property>
+    <property name="traumaticos" type="string">
+      <column name="traumaticos"/>
+    </property>
+    <property name="alergicos" type="string">
+      <column name="alergicos"/>
+    </property>
+    <property name="personalesOtras" type="string">
+      <column name="personales_otras"/>
+    </property>
+    <property name="personalesFum" type="string">
+      <column name="personales_fum"/>
+    </property>
+    <property name="tomaMedicamentos" type="string">
+      <column name="toma_medicamentos"/>
+    </property>
+    <property name="alcoholismo1" type="string">
+      <column name="alcoholismo1"/>
+    </property>
+    <property name="alcoholismo2" type="string">
+      <column name="alcoholismo2"/>
+    </property>
+    <property name="alcoholismo3" type="string">
+      <column name="alcoholismo3"/>
+    </property>
+    <property name="alcoholismo4" type="string">
+      <column name="alcoholismo4"/>
+    </property>
+    <property name="deportes1" type="string">
+      <column name="deportes1"/>
+    </property>
+    <property name="deportes2" type="string">
+      <column name="deportes2"/>
+    </property>
+    <property name="deportes3" type="string">
+      <column name="deportes3"/>
+    </property>
+    <property name="deportes4" type="string">
+      <column name="deportes4"/>
+    </property>
+    <property name="drogas1" type="string">
+      <column name="drogas1"/>
+    </property>
+    <property name="drogas2" type="string">
+      <column name="drogas2"/>
+    </property>
+    <property name="drogas3" type="string">
+      <column name="drogas3"/>
+    </property>
+    <property name="drogas4" type="string">
+      <column name="drogas4"/>
+    </property>
+    <property name="tabaquismo1" type="string">
+      <column name="tabaquismo1"/>
+    </property>
+    <property name="tabaquismo2" type="string">
+      <column name="tabaquismo2"/>
+    </property>
+    <property name="tabaquismo3" type="string">
+      <column name="tabaquismo3"/>
+    </property>
+    <property name="tabaquismo4" type="string">
+      <column name="tabaquismo4"/>
+    </property>
+    <property name="riesgos" type="string">
+      <column name="riesgos"/>
+    </property>
+    <property name="pdf" type="string">
+      <column name="pdf"/>
+    </property>
+  </class>
+</hibernate-mapping>

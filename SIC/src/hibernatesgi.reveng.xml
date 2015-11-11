@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="sgi"/>
+  <table-filter match-name="contacto"/>
+  <table-filter match-name="observacion"/>
+  <table-filter match-name="registros"/>
+  <table-filter match-name="acreditacion"/>
+  <table-filter match-name="foto_reporte"/>
+  <table-filter match-name="login"/>
+  <table-filter match-name="revpat"/>
+  <table-filter match-name="revpavitem"/>
+  <table-filter match-name="asistente"/>
+  <table-filter match-name="reportes"/>
+  <table-filter match-name="panico"/>
+  <table-filter match-name="patrulla"/>
+  <table-filter match-name="consigna"/>
+  <table-filter match-name="dispositivos"/>
+  <table-filter match-name="premisos"/>
+  <table-filter match-name="indexpatrulla"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="ticker"/>
+  <table-filter match-name="foto"/>
+  <table-filter match-name="vehiculo"/>
+  <table-filter match-name="r_pall"/>
+  <table-filter match-name="configuracion"/>
+</hibernate-reverse-engineering>

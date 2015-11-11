@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.Roles" schema="public" table="roles">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">roles_id_seq</param>
+      </generator>
+    </id>
+    <property name="ci" type="string">
+      <column name="ci"/>
+    </property>
+    <property name="cedula" type="string">
+      <column name="cedula"/>
+    </property>
+    <property name="dias" type="string">
+      <column name="dias"/>
+    </property>
+    <property name="sueldo" type="string">
+      <column name="sueldo"/>
+    </property>
+    <property name="iess" type="string">
+      <column name="iess"/>
+    </property>
+    <property name="cuentatipo" type="string">
+      <column name="cuentatipo"/>
+    </property>
+    <property name="cuentanum" type="string">
+      <column name="cuentanum"/>
+    </property>
+    <property name="cuentadue" type="string">
+      <column name="cuentadue"/>
+    </property>
+    <property name="cuentaci" type="string">
+      <column name="cuentaci"/>
+    </property>
+    <property name="suplementaria" type="string">
+      <column name="suplementaria"/>
+    </property>
+    <property name="suplementaria2" type="string">
+      <column name="suplementaria2"/>
+    </property>
+    <property name="mes" type="string">
+      <column name="mes"/>
+    </property>
+    <property name="anio" type="string">
+      <column name="anio"/>
+    </property>
+    <property name="varios" type="string">
+      <column name="varios"/>
+    </property>
+    <property name="total" type="string">
+      <column name="total"/>
+    </property>
+    <property name="nombre" type="string">
+      <column name="nombre"/>
+    </property>
+    <property name="multas" type="string">
+      <column name="multas"/>
+    </property>
+    <property name="decimo3" type="string">
+      <column name="decimo3"/>
+    </property>
+    <property name="decimo4" type="string">
+      <column name="decimo4"/>
+    </property>
+    <property name="actividades" type="string">
+      <column name="actividades"/>
+    </property>
+    <property name="bonos" type="string">
+      <column name="bonos"/>
+    </property>
+    <property name="reposiciones" type="string">
+      <column name="reposiciones"/>
+    </property>
+    <property name="prestamo1" type="string">
+      <column name="prestamo1"/>
+    </property>
+    <property name="prestamo2" type="string">
+      <column name="prestamo2"/>
+    </property>
+    <property name="prestamo3" type="string">
+      <column name="prestamo3"/>
+    </property>
+    <property name="prestamo4" type="string">
+      <column name="prestamo4"/>
+    </property>
+    <property name="prestamo5" type="string">
+      <column name="prestamo5"/>
+    </property>
+    <property name="prestamo6" type="string">
+      <column name="prestamo6"/>
+    </property>
+    <property name="prestamo7" type="string">
+      <column name="prestamo7"/>
+    </property>
+    <property name="prestamo8" type="string">
+      <column name="prestamo8"/>
+    </property>
+    <property name="fondos" type="string">
+      <column name="fondos"/>
+    </property>
+    <property name="comisiones" type="string">
+      <column name="comisiones"/>
+    </property>
+    <property name="decimotercero" type="string">
+      <column name="decimotercero"/>
+    </property>
+    <property name="decimocuarto" type="string">
+      <column name="decimocuarto"/>
+    </property>
+    <property name="depa" type="string">
+      <column name="depa"/>
+    </property>
+    <property name="mobilizacion" type="string">
+      <column name="mobilizacion"/>
+    </property>
+    <property name="banco" type="string">
+      <column name="banco"/>
+    </property>
+    <property name="alimentacion" type="string">
+      <column name="alimentacion"/>
+    </property>
+    <property name="liquidacion" type="string">
+      <column name="liquidacion"/>
+    </property>
+    <property name="bon" type="string">
+      <column name="bon"/>
+    </property>    
+  </class>
+</hibernate-mapping>

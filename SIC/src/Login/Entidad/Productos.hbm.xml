@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/03/2014 12:36:59 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Productos" schema="public" table="productos">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">productos_id_seq</param>
+      </generator>
+    </id>
+    <property name="cantidad" type="string">
+      <column name="cantidad"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column name="descripcion"/>
+    </property>
+    <property name="unitario" type="string">
+      <column name="unitario"/>
+    </property>
+    <property name="total" type="string">
+      <column name="total"/>
+    </property>
+    <property name="proyecto" type="string">
+      <column name="proyecto"/>
+    </property>
+    <property name="serial" type="string">
+      <column name="serial"/>
+    </property>
+    <property name="original" type="string">
+      <column name="original"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/03/2015 16:39:49 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Bitacora.tablas.Usuario" table="usuario" schema="public">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="sequence">
+              <param name="sequence">usuario_id_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="vehiculo" class="Bitacora.tablas.Vehiculo" fetch="select">
+            <column name="id_vehiculo" />
+        </many-to-one>
+        <many-to-one name="acreditacion" class="Bitacora.tablas.Acreditacion" fetch="select">
+            <column name="id_acreditacion" />
+        </many-to-one>
+        <property name="ci" type="string">
+            <column name="ci" length="30" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="50" />
+        </property>
+        <property name="material" type="string">
+            <column name="material" length="100" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" length="100" />
+        </property>
+        <set name="registroses" inverse="true">
+            <key>
+                <column name="id_usuario" />
+            </key>
+            <one-to-many class="Bitacora.tablas.Registros" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Patrulla" table="patrulla" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">patrulla_id_seq</param>
+            </generator>
+        </id>
+        <property name="patrulla" type="string">
+            <column name="patrulla" />
+        </property>
+        <property name="responsable" type="string">
+            <column name="responsable" />
+        </property>
+        <property name="tiempo" type="string">
+            <column name="tiempo" />
+        </property>
+        <property name="guardia" type="string">
+            <column name="guardia" />
+        </property>
+        <property name="inicio" type="timestamp">
+            <column name="inicio" length="35" />
+        </property>
+        <property name="fin" type="timestamp">
+            <column name="fin" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>

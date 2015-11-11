@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/04/2015 15:59:08 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Login.Entidad.Caldepartamentoactividad" table="caldepartamentoactividad" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">caldepartamentoactividad_id_seq</param>
+              </generator>
+        </id>
+        <many-to-one name="calactividad" class="Login.Entidad.Calactividad" fetch="select">
+            <column name="idactividad" not-null="true" />
+        </many-to-one>
+        <property name="idcaldepartamento" type="int">
+            <column name="idcaldepartamento" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/03/2015 16:39:49 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Bitacora.tablas.Horarios" table="horarios" schema="public">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="sequence">
+              <param name="sequence">horarios_id_seq</param>
+            </generator>
+        </id>
+        <property name="semana" type="string">
+            <column name="semana" length="100" />
+        </property>
+        <property name="anio" type="string">
+            <column name="anio" length="10" />
+        </property>
+        <property name="lunes" type="string">
+            <column name="lunes" length="100" />
+        </property>
+        <property name="martes" type="string">
+            <column name="martes" length="100" />
+        </property>
+        <property name="miercoles" type="string">
+            <column name="miercoles" length="100" />
+        </property>
+        <property name="jueves" type="string">
+            <column name="jueves" length="100" />
+        </property>
+        <property name="viernes" type="string">
+            <column name="viernes" length="100" />
+        </property>
+        <property name="sabado" type="string">
+            <column name="sabado" length="100" />
+        </property>
+        <property name="domingo" type="string">
+            <column name="domingo" length="100" />
+        </property>
+        <property name="puesto" type="string">
+            <column name="puesto" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Consigna" table="consigna" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">consigna_id_seq</param>
+            </generator>
+        </id>
+        <property name="idlogin" type="java.lang.Integer">
+            <column name="idlogin" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" />
+        </property>
+        <property name="vigencia" type="string">
+            <column name="vigencia" />
+        </property>
+        <property name="dispositivos" type="string">
+            <column name="dispositivos" />
+        </property>
+        <property name="tiempoAlerta" type="string">
+            <column name="tiempo_alerta" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost/rrhh</property>-->
+    <property name="hibernate.connection.url">jdbc:postgresql://181.198.26.33:5432/rrhh</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">cajamarca-2013</property>
+    <property name="hibernate.jdbc.use_get_generated_keys">true</property>
+    <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+    <property name="hibernate.c3p0.min_size">1</property>
+    <property name="hibernate.c3p0.max_size">2</property>
+    <property name="hibernate.c3p0.timeout">480</property>
+    <property name="hibernate.c3p0.validate">false</property>
+    <property name="current_session_context_class">thread</property>
+    <property name="hiberenate.show_sql">false</property>
+    <property name="hbm2ddl.auto">validate</property>
+    <mapping resource="rrhh/Entidad/Departamento.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Alimentacion.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Fondosreserva.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/DeptEmpl.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Empleado.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/CvLaboral.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/CvAdicional.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/CvReferencia.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/CvIdioma.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/CvEstudio.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/MedicaProfesional.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Medica.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Evaluacion.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Multa.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Users.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Bono.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Comisiones.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Cuentas.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Horas.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Roles.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Anticipos.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Prestamos.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Pruebasf.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Otros.hbm.xml"/>
+    <mapping resource="rrhh/Entidad/Permisos.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

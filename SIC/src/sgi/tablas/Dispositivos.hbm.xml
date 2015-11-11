@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Dispositivos" table="dispositivos" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">dispositivos_id_seq</param>
+            </generator>
+        </id>
+        <property name="mac" type="string">
+            <column name="mac" />
+        </property>
+        <property name="punto" type="string">
+            <column name="punto" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" />
+        </property>
+        <property name="detalle" type="string">
+            <column name="detalle" />
+        </property>
+    </class>
+</hibernate-mapping>

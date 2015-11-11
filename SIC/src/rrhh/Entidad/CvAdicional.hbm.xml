@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.CvAdicional" schema="public" table="cv_adicional">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">cv_adicional_id_seq</param>
+      </generator>
+    </id>
+    <property name="aspiracion" type="string">
+      <column name="aspiracion"/>
+    </property>
+    <property name="discapacidad" type="string">
+      <column name="discapacidad"/>
+    </property>
+    <property name="conadis" type="string">
+      <column name="conadis"/>
+    </property>
+    <property name="tipo" type="string">
+      <column name="tipo"/>
+    </property>
+    <property name="conocimientos" type="string">
+      <column name="conocimientos"/>
+    </property>
+    <property name="porcentaje" type="string">
+      <column name="porcentaje"/>
+    </property>
+    <property name="nivel" type="string">
+      <column name="nivel"/>
+    </property>
+    <property name="cedula" type="string">
+      <column name="cedula"/>
+    </property>
+  </class>
+</hibernate-mapping>

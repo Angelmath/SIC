@@ -1,0 +1,408 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sgi.acceso;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import sgi.servicio.ServiceHb;
+import sgi.tablas.Foto;
+import sgi.tablas.Patrulla;
+import sgi.tablas.RPall;
+
+/**
+ *
+ * @author Angelmath
+ */
+public class patrulla extends javax.swing.JPanel {
+    JFrame padre;
+    Dimension d;
+    boolean ini=true;
+    boolean fin=true;
+    Date fechaini = new Date();
+    Date fechafin = new Date();
+    String localidad="";
+    paneles f;
+    
+    /**
+     * Creates new form egreso
+     * @param responsable
+     * @param frame
+     * @param localidad
+     */
+    public patrulla(String responsable, paneles frame, String localidad) {
+        f=frame;
+        this.localidad= localidad;
+        d = Toolkit.getDefaultToolkit().getScreenSize();
+        initComponents();
+        setSize(1140, d.height-60-103);
+        jScrollPane1.setSize(1122,  getHeight()-jScrollPane1.getY()-10);
+        jScrollPane2.setSize(1122,  jScrollPane2.getY());
+        jPanel2.setLocation(((1140)/2) - (jPanel2.getWidth()/2), jPanel2.getY());
+        jLabel12.setSize(d.width-60, 1);
+        setVisible(false);
+    }
+
+    public void llenar(){
+        try{
+            ServiceHb helper = new ServiceHb();
+            helper.iniciarTransaccion();
+            helper.setLocal(localidad);
+            List<RPall> lt2= helper.getPatrullas();
+            List<RPall> lt= helper.getRelevo();
+            helper.cerrarSesion();
+            if(lt!=null){
+                DefaultTableModel temp2 = (DefaultTableModel) jTable2.getModel();
+                for(int i=temp2.getRowCount()-1;i>=0;i--){
+                   temp2.removeRow(i);
+                }
+                lt.stream().map((i) -> {
+                    String t1=""+i.getNumero();
+                    String t2=""+i.getFecha();
+                    String t3=""+i.getHoraini();
+                    String t4=""+i.getHorafin();
+                    Object nuevo[]= {t1,t3,t4,i};
+                    return nuevo;
+                }).forEach((nuevo) -> {
+                    temp2.addRow(nuevo);
+                });
+            }
+            if(lt2!=null){
+                DefaultTableModel temp2 = (DefaultTableModel) jTable1.getModel();
+                for(int i=temp2.getRowCount()-1;i>=0;i--){
+                   temp2.removeRow(i);
+                }
+                lt2.stream().map((i) -> {
+                    String t1=""+i.getNumero();
+                    String t2=""+i.getFecha();
+                    String t3=""+i.getHoraini();
+                    String t4=""+i.getHorafin();
+                    String t5=""+i.getIdfoto();
+                    Object nuevo[]= {t1,t3,t4,t5,i};
+                    return nuevo;
+                }).forEach((nuevo) -> {
+                    temp2.addRow(nuevo);
+                });
+            }
+        }catch(Exception io){
+            System.out.println(io);
+        }
+    }
+    
+    public Date getFechaini() {
+        return fechaini;
+    }
+
+    public void setFechaini(Date fechaini) {
+        this.fechaini = fechaini;
+    }
+
+    public Date getFechafin() {
+        return fechafin;
+    }
+
+    public void setFechafin(Date fechafin) {
+        this.fechafin = fechafin;
+    }
+
+    public JFrame getPadre() {
+        return padre;
+    }
+
+    public boolean isIni() {
+        return ini;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JTable getjTable2() {
+        return jTable2;
+    }
+
+    public void setjTable2(JTable jTable2) {
+        this.jTable2 = jTable2;
+    }
+
+    public void setIni(boolean ini) {
+        this.ini = ini;
+    }
+
+    public boolean isFin() {
+        return fin;
+    }
+
+    public void setFin(boolean fin) {
+        this.fin = fin;
+    }
+
+    public Dimension getD() {
+        return d;
+    }
+
+    public void setD(Dimension d) {
+        this.d = d;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JTable getjTable1() {
+        return jTable1;
+    }
+
+    public void setjTable1(JTable jTable1) {
+        this.jTable1 = jTable1;
+    }
+
+    public void setPadre(JFrame padre) {
+        this.padre = padre;
+    }
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 4));
+        setLayout(null);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Numero", "Hora Inicio", "Hora Fin", "Ver Diseño", "VER"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setRowHeight(26);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(4).setMinWidth(200);
+            jTable1.getColumnModel().getColumn(4).setPreferredWidth(200);
+            jTable1.getColumnModel().getColumn(4).setMaxWidth(200);
+        }
+
+        add(jScrollPane1);
+        jScrollPane1.setBounds(10, 300, 990, 250);
+
+        jPanel2.setOpaque(false);
+        jPanel2.setLayout(null);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesnew/mini-pestana-observaciones-grey.png"))); // NOI18N
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel13);
+        jLabel13.setBounds(0, 0, 98, 28);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesnew/mini-pestana-patrulla-blue.png"))); // NOI18N
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(100, 0, 98, 28);
+
+        add(jPanel2);
+        jPanel2.setBounds(250, 38, 200, 28);
+
+        jLabel12.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel12.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel12.setOpaque(true);
+        add(jLabel12);
+        jLabel12.setBounds(4, 50, 1190, 1);
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Numero", "Hora Inicio", "Hora Fin", "VER"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable2.setRowHeight(26);
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTable2);
+        if (jTable2.getColumnModel().getColumnCount() > 0) {
+            jTable2.getColumnModel().getColumn(3).setMinWidth(200);
+            jTable2.getColumnModel().getColumn(3).setPreferredWidth(200);
+            jTable2.getColumnModel().getColumn(3).setMaxWidth(200);
+        }
+
+        add(jScrollPane2);
+        jScrollPane2.setBounds(10, 120, 990, 110);
+
+        jLabel1.setText("PATRULLA");
+        add(jLabel1);
+        jLabel1.setBounds(10, 260, 240, 30);
+
+        jLabel9.setText("RELEVO");
+        add(jLabel9);
+        jLabel9.setBounds(10, 80, 240, 30);
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        int col = jTable1.getSelectedColumn();
+        int rows = jTable1.getSelectedRow();
+        ServiceHb helper = null;
+        try{
+            if(col==3){
+                helper = new ServiceHb();
+                helper.iniciarTransaccion();
+                Foto foto = helper.getfotoid(jTable1.getValueAt(rows, col).toString());
+                helper.cerrarSesion();
+                mostrarimg m = new mostrarimg(null, true, foto.getFoto());
+            }
+        }catch(Exception io){
+            try{
+            helper.cerrarSesion();
+            }catch(Exception ios){}
+        }
+        if(col==4){
+            verdatoitems vrd= new verdatoitems(padre, ini, (RPall)jTable1.getValueAt(rows, col));
+        }
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        f.setEventoMouseingreso5();
+        
+    }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        f.setEventoMouseingreso4();
+    }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        int col = jTable2.getSelectedColumn();
+        int row = jTable2.getSelectedRow();
+        if(col==3){
+            verdatoitems vrd= new verdatoitems(padre, ini, (RPall)jTable2.getValueAt(row, col));
+        }
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    public void refresh(){
+        Calendar now = Calendar.getInstance();
+        Calendar base = Calendar.getInstance();
+        base.set(base.get(Calendar.YEAR),base.get(Calendar.MONTH),base.get(Calendar.DAY_OF_MONTH)-2,7,0,0);
+        
+        Calendar base2 = Calendar.getInstance();
+        base2.set(base2.get(Calendar.YEAR),base2.get(Calendar.MONTH),base2.get(Calendar.DAY_OF_MONTH)-1,19,0,0);
+        
+        Calendar base3 = Calendar.getInstance();
+        base3.set(base3.get(Calendar.YEAR),base3.get(Calendar.MONTH),base3.get(Calendar.DAY_OF_MONTH)+1,7,0,0);
+        
+        Calendar base4 = Calendar.getInstance();
+        base4.set(base4.get(Calendar.YEAR),base4.get(Calendar.MONTH),base4.get(Calendar.DAY_OF_MONTH)+2,19,0,0);
+        List<Patrulla> list=null;
+        try{
+            ServiceHb helper = new ServiceHb();
+            helper.iniciarTransaccion();
+            if(now.after(base) && now.before(base2)){
+                //list = helper.getListPatrulla(base.getTime(), base2.getTime());
+            }else if(now.after(base2) && now.before(base3)){
+                //list = helper.getListPatrulla(base2.getTime(), base3.getTime());
+            }else{
+                //list = helper.getListPatrulla(base3.getTime(), base4.getTime());
+            }
+            helper.confirmarTransaccion();
+            helper.cerrarSesion();
+        }catch(Exception io){
+        
+        }
+        DefaultTableModel temp2 = (DefaultTableModel) getjTable1().getModel();
+        for(int i=temp2.getRowCount()-1;i>=0;i--){
+            temp2.removeRow(i);
+        }
+        if(list!=null){
+            
+            list.stream().forEach((i) -> {
+                String campo1= "";
+                String campo2= "";
+                String campo3= "";
+                //String campo4= Funcion.DateTimeFormatJS(i.getInicio());
+                String campo4= "";
+                String campo5= "";
+                String campo6= "";
+                int campo7 = i.getId();
+                DefaultTableModel temp = (DefaultTableModel) getjTable1().getModel();
+                Object nuevo[]= {campo1,campo2,campo3,campo4,campo5,campo6,campo7};
+                temp.addRow(nuevo);
+            });
+        }
+    }
+    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    // End of variables declaration//GEN-END:variables
+}

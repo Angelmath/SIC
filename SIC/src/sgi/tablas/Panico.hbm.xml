@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Panico" table="panico" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">panico_id_seq</param>
+            </generator>
+        </id>
+        <property name="dispositivo" type="string">
+            <column name="dispositivo" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" />
+        </property>
+        <property name="mac" type="string">
+            <column name="mac" />
+        </property>
+        <property name="tipoAlerta" type="string">
+            <column name="tipo_alerta" />
+        </property>
+    </class>
+</hibernate-mapping>

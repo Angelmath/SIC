@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/05/2014 06:20:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Ctecobrar" schema="public" table="ctecobrar">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">ctecobrar_id_seq</param>
+      </generator>
+    </id>
+    <property name="fecha" type="date">
+      <column name="fecha"/>
+    </property>
+    <property name="factura" type="string">
+      <column name="factura"/>
+    </property>
+    <property name="autfactura" type="string">
+      <column name="autfactura"/>
+    </property>
+    <property name="cliente" type="string">
+      <column name="cliente"/>
+    </property>
+    <property name="proyecto" type="string">
+      <column name="proyecto"/>
+    </property>
+    <property name="planpagos" type="string">
+      <column name="planpagos"/>
+    </property>
+    <property name="observacion" type="string">
+      <column name="observacion"/>
+    </property>
+    <property name="montos" type="string">
+      <column name="montos"/>
+    </property>
+    <property name="submontos" type="string">
+      <column name="submontos"/>
+    </property>
+    <property name="ivamontos" type="string">
+      <column name="ivamontos"/>
+    </property>
+    <property name="autretencion" type="string">
+      <column name="autretencion"/>
+    </property>
+    <property name="numretencion" type="string">
+      <column name="numretencion"/>
+    </property>
+    <property name="totalretencion" type="string">
+      <column name="totalretencion"/>
+    </property>
+    <property name="idretencion" type="string">
+      <column name="idretencion"/>
+    </property>
+    <property name="saldo" type="string">
+      <column name="saldo"/>
+    </property>
+    <property name="idcliente" type="int">
+      <column name="idcliente"/>
+    </property>
+    <property name="idproyecto" type="int">
+      <column name="idproyecto"/>
+    </property>
+  </class>
+</hibernate-mapping>

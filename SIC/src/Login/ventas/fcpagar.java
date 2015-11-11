@@ -1,0 +1,528 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package Login.ventas;
+
+import Login.Entidad.Factura;
+import Login.Entidad.Instalacion;
+import Login.Entidad.Proveedores;
+import Login.servicio.ServiceHb;
+import static Login.ventas.fccobrar.getPrimerDiaDelMes;
+import static Login.ventas.fccobrar.getPrimerDiaDelMes3;
+import static Login.ventas.fccobrar.getUltimoDiaDelMes;
+import static Login.ventas.fccobrar.getUltimoDiaDelMes3;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.text.DecimalFormat;
+import java.util.Calendar;
+import java.util.List;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import monitoreo.servicio.Funcion;
+/**
+ *
+ * @author homemig
+ */
+public class fcpagar extends javax.swing.JPanel {
+String cl;
+    /**
+     * Creates new form cliente
+     */
+    public fcpagar() {
+        Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+        String[] fecha= {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
+        initComponents();
+        Calendar rightNow = Calendar.getInstance();
+        int ccyy = rightNow.get(Calendar.YEAR);
+        int month = rightNow.get(Calendar.MONTH);
+        jLabel4.setText(fecha[month]+", "+ccyy);
+        jLabel2.setText(Funcion.DateFormat(rightNow.getTime()));
+        setSize(d.width, d.height-95);
+        int x=(int)(d.getWidth()-(jScrollPane1.getX())-100);
+        int y=(int)(d.getHeight()-(jScrollPane1.getY()*2)-50);
+        jScrollPane1.setSize(x, y);
+        
+        jComboBox1.setLocation(jScrollPane1.getX()+jScrollPane1.getWidth()-jComboBox1.getWidth(), jComboBox1.getY());
+        jPanel1.setLocation(x+jScrollPane1.getX()-jPanel1.getWidth(), y+jScrollPane1.getY());
+        jTable1.setSize(x, y);
+        jTable1.getColumnModel().getColumn(4).setCellRenderer( new CellRenderer("negativo") );
+        jTable1.getColumn("Actualizar").setCellRenderer(new ButtonRenderer());
+        setVisible(false);
+    }
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public void setjButton1(JButton jButton1) {
+        this.jButton1 = jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public void setjButton2(JButton jButton2) {
+        this.jButton2 = jButton2;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public JComboBox getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public void setjComboBox1(JComboBox jComboBox1) {
+        this.jComboBox1 = jComboBox1;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JTable getjTable1() {
+        return jTable1;
+    }
+
+    public void setjTable1(JTable jTable1) {
+        this.jTable1 = jTable1;
+    }
+
+    public String getCl() {
+        return cl;
+    }
+
+    public void setCl(String cl) {
+        this.cl = cl;
+    }
+
+
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
+
+        jButton1.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        jButton1.setText("CUENTAS POR PAGAR: : +/- 3 MESES");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        add(jButton1);
+        jButton1.setBounds(40, 310, 270, 40);
+
+        jButton2.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        jButton2.setText("CUENTAS POR PAGAR: MES EN CURSO");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2);
+        jButton2.setBounds(40, 250, 270, 40);
+
+        jLabel1.setOpaque(true);
+        add(jLabel1);
+        jLabel1.setBounds(30, 220, 290, 160);
+
+        jLabel2.setFont(new java.awt.Font("Roboto Thin", 0, 12)); // NOI18N
+        jLabel2.setText("10/12/2015");
+        add(jLabel2);
+        jLabel2.setBounds(570, 60, 150, 30);
+
+        jLabel3.setFont(new java.awt.Font("Roboto Thin", 0, 12)); // NOI18N
+        jLabel3.setText("Fecha");
+        add(jLabel3);
+        jLabel3.setBounds(380, 60, 150, 30);
+
+        jLabel4.setFont(new java.awt.Font("Roboto Thin", 0, 12)); // NOI18N
+        jLabel4.setText("Octubre, 2015");
+        add(jLabel4);
+        jLabel4.setBounds(570, 20, 150, 30);
+
+        jLabel5.setFont(new java.awt.Font("Roboto Thin", 0, 12)); // NOI18N
+        jLabel5.setText("Periodo");
+        add(jLabel5);
+        jLabel5.setBounds(380, 20, 150, 30);
+
+        jTable1.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Fecha", "Proveedor", "Plan de Pagos", "Observacion", "Monto", "Pagado", "Actualizar"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setRowHeight(26);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setMinWidth(70);
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(0).setMaxWidth(70);
+            jTable1.getColumnModel().getColumn(5).setMinWidth(60);
+            jTable1.getColumnModel().getColumn(5).setPreferredWidth(60);
+            jTable1.getColumnModel().getColumn(5).setMaxWidth(60);
+            jTable1.getColumnModel().getColumn(6).setMinWidth(80);
+            jTable1.getColumnModel().getColumn(6).setPreferredWidth(80);
+            jTable1.getColumnModel().getColumn(6).setMaxWidth(80);
+        }
+
+        add(jScrollPane1);
+        jScrollPane1.setBounds(380, 122, 650, 380);
+
+        jLabel7.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        jLabel7.setText("Cuentas por Pagar");
+        add(jLabel7);
+        jLabel7.setBounds(30, 40, 180, 30);
+
+        jLabel8.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        jLabel8.setText("Modulo Financiero - Contable");
+        add(jLabel8);
+        jLabel8.setBounds(30, 10, 330, 30);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pagado", "No Pagado" }));
+        add(jComboBox1);
+        jComboBox1.setBounds(850, 90, 180, 30);
+
+        jPanel1.setOpaque(false);
+        jPanel1.setLayout(null);
+
+        jLabel9.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        jLabel9.setText("Total:");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(0, 0, 150, 50);
+
+        jLabel10.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(150, 0, 160, 50);
+
+        add(jPanel1);
+        jPanel1.setBounds(720, 502, 310, 50);
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        carga1();
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        carga2();
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        int row= jTable1.getSelectedRow();
+        int col= jTable1.getSelectedColumn();
+        if(col==6){
+                String selectedSiteName = JOptionPane.showInputDialog(null,"Clave ");
+                if(selectedSiteName.equalsIgnoreCase("cajamarca")){
+                try{
+                    Factura ct;
+                    if(jTable1.getValueAt(row, col).toString().equalsIgnoreCase("")){
+                        
+                    }else{
+                        ct = (Factura)jTable1.getValueAt(row, col);
+                        if(ct.getFecha2()!=null){
+                            ServiceHb helper = new ServiceHb();
+                            helper.iniciarTransaccion();
+                            ct.setPagado("Pagado");
+                            helper.actualizarObjeto(ct);
+                            helper.confirmarTransaccion();
+                            helper.cerrarSesion();
+                            JOptionPane.showMessageDialog(null, "Generar Cuentas por Pagar para Actualizar");
+                        }else{
+                            JOptionPane.showMessageDialog(null, "Opcion no Permitida");
+                        }
+                    }
+                    
+                    
+                }catch(Exception io){
+                
+                }
+                }
+            }
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    public void carga1(){
+        try{
+            ServiceHb helper = new ServiceHb();
+            helper.iniciarTransaccion();
+            java.util.Date utilDate = new java.util.Date();
+            java.sql.Date inicio = new java.sql.Date(getPrimerDiaDelMes().getTime());
+            java.sql.Date fin = new java.sql.Date(getUltimoDiaDelMes().getTime());
+            DecimalFormat df = new DecimalFormat("0.00");
+            
+            List<Factura> list = helper.getlistaFactura(inicio, fin,jComboBox1.getSelectedItem().toString());
+            Calendar ca = Calendar.getInstance();
+            int mes = ca.get(Calendar.MONTH);
+            int maxdia = ca.getMaximum(Calendar.DAY_OF_MONTH);
+            JTable tabla = new JTable();
+            tabla= jTable1;
+            DefaultTableModel temp2 = (DefaultTableModel) tabla.getModel();
+            for(int i=temp2.getRowCount()-1;i>=0;i--){
+                temp2.removeRow(i);
+            }
+            int tempo=0;
+            int vacio=0;
+            int i=1;
+            Double d=0.0;
+            if(list!=null){
+                while(maxdia!=i){
+                    tempo=0;
+                    for(int y=0;y<list.size();y++){
+                        Calendar cqa = Calendar.getInstance();
+                        cqa.setTime(list.get(y).getFecha());
+                        int day= cqa.get(Calendar.DAY_OF_MONTH);
+                        if(day==i){
+                            tempo=1;
+                            if(i< maxdia){
+                                DefaultTableModel temp = (DefaultTableModel) tabla.getModel();
+                                float val = Float.parseFloat(list.get(y).getTotal());
+                                d=d+val;
+                                Proveedores p = (Proveedores)helper.obtenerObjeto(Proveedores.class, Integer.parseInt(list.get(y).getIdproveedor()));
+                                boolean t=true;
+                                if(list.get(y).getPagado().equalsIgnoreCase("Pagado")){
+                                    t=true;
+                                }else{
+                                    t=false;
+                                }
+                                Object nuevo[]= {(i)+"/"+(mes+1),p.getRazon(),list.get(y).getTipo(),list.get(y).getObservacion(),"$"+df.format(val).replace(",", "."),t,list.get(y)};
+                                temp.addRow(nuevo);
+                            }
+                        }
+                    }
+                    if(tempo==0){
+                        if(i< maxdia){
+                            DefaultTableModel temp = (DefaultTableModel) tabla.getModel();
+                            Object nuevo[]= {(i)+"/"+(mes+1),"","","","",false,""};
+                            temp.addRow(nuevo);
+                        }
+                    }else{
+
+                    }
+                    i++;
+                }
+                
+            }
+            jLabel10.setText("$ "+ df.format(d).replace(",", "."));
+        helper.cerrarSesion();
+        }catch(Exception io){
+        
+        }
+    }
+    
+    public void carga2(){
+        try{
+            ServiceHb helper = new ServiceHb();
+            helper.iniciarTransaccion();
+            java.util.Date utilDate = new java.util.Date();
+            java.sql.Date inicio = new java.sql.Date(getPrimerDiaDelMes3().getTime());
+            java.sql.Date fin = new java.sql.Date(getUltimoDiaDelMes3().getTime());
+            DecimalFormat df = new DecimalFormat("0.00");
+            
+            List<Factura> list = helper.getlistaFactura(inicio, fin, jComboBox1.getSelectedItem().toString());
+            Calendar ca = Calendar.getInstance();
+            int mes = ca.get(Calendar.MONTH);
+            int maxdia = ca.getMaximum(Calendar.DAY_OF_MONTH);
+            JTable tabla = new JTable();
+            tabla= jTable1;
+            
+            
+            DefaultTableModel temp2 = (DefaultTableModel) tabla.getModel();
+            for(int i=temp2.getRowCount()-1;i>=0;i--){
+                temp2.removeRow(i);
+            }
+            int tempo=0;
+            int vacio=0;
+            int i=1;
+            Double d=0.0;
+            if(list!=null){
+                    //for(int i=0; i< maxdia;i++)
+                    tempo=0;
+                    for(int y=0;y<list.size();y++){
+                        Calendar cqa = Calendar.getInstance();
+                        cqa.setTime(list.get(y).getFecha());
+                        int day= cqa.get(Calendar.DAY_OF_MONTH);
+                        mes = cqa.get(Calendar.MONTH);
+                            tempo=1;
+                            boolean t=true;
+                            if(list.get(y).getPagado().equalsIgnoreCase("Pagado")){
+                                t=true;
+                            }else{
+                                t=false;
+                            }
+                            if(i< maxdia){
+                                DefaultTableModel temp = (DefaultTableModel) tabla.getModel();
+                                float val = Float.parseFloat(list.get(y).getTotal());
+                                d=d+val;
+                                Proveedores p = (Proveedores)helper.obtenerObjeto(Proveedores.class, Integer.parseInt(list.get(y).getIdproveedor()));
+                                Instalacion in = (Instalacion)helper.obtenerObjeto(Instalacion.class, list.get(y).getIdinstalacion());
+                                Object nuevo[]= {(day)+"/"+(mes+1),p.getRazon(),list.get(y).getTipo(),list.get(y).getObservacion(),"$"+df.format(val).replace(",", "."),t,list.get(y)};
+                                temp.addRow(nuevo);
+                            }
+                        }
+                }
+            jLabel10.setText("$ "+ df.format(d).replace(",", "."));
+        helper.cerrarSesion();
+        }catch(Exception io){
+        
+        }
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    // End of variables declaration//GEN-END:variables
+}

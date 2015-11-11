@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/05/2014 06:20:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Login.Entidad.Items" schema="public" table="items">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">items_id_seq</param>
+      </generator>
+    </id>
+    <property name="cat" type="string">
+      <column name="cat"/>
+    </property>
+    <property name="marca" type="string">
+      <column name="marca"/>
+    </property>
+    <property name="modelo" type="string">
+      <column name="modelo"/>
+    </property>
+    <property name="proveedor" type="string">
+      <column name="proveedor"/>
+    </property>
+    <property name="idproveedor" type="string">
+      <column name="idproveedor"/>
+    </property>
+    <property name="dc" type="string">
+      <column name="dc"/>
+    </property>
+    <property name="dl" type="string">
+      <column name="dl"/>
+    </property>
+    <property name="costo" type="string">
+      <column name="costo"/>
+    </property>
+    <property name="ft" type="string">
+      <column name="ft"/>
+    </property>
+    <property name="otro1" type="string">
+      <column name="otro1"/>
+    </property>
+    <property name="otro2" type="string">
+      <column name="otro2"/>
+    </property>
+    <property name="codigo" type="string">
+      <column name="codigo"/>
+    </property>
+    <property name="fecha" type="date">
+      <column name="fecha"/>
+    </property>
+  </class>
+</hibernate-mapping>

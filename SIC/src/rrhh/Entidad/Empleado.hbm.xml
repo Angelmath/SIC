@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><!-- Generated 23/01/2014 08:44:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="rrhh.Entidad.Empleado" schema="public" table="empleado">
+    <id name="ci" type="int">
+      <column name="ci"/>
+      <generator class="sequence">
+        <param name="sequence">empleado_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="rrhh.Entidad.DeptEmpl" fetch="select" name="deptEmpl">
+      <column name="id_dept"/>
+    </many-to-one>
+    <property name="cid" type="string">
+      <column name="cid" not-null="true" />
+    </property>
+    <property name="nombre1" type="string">
+      <column name="nombre1"/>
+    </property>
+    <property name="banco" type="string">
+      <column name="banco"/>
+    </property>
+    <property name="nombre2" type="string">
+      <column name="nombre2"/>
+    </property>
+    <property name="apellido1" type="string">
+      <column name="apellido1"/>
+    </property>
+    <property name="apellido2" type="string">
+      <column name="apellido2"/>
+    </property>
+    <property name="cumple2" type="string">
+      <column name="cumple2"/>
+    </property>
+    <property name="salidaemp" type="string">
+      <column name="salidaemp"/>
+    </property>
+    <property name="correo" type="string">
+      <column name="correo"/>
+    </property>
+    <property name="ultimo" type="string">
+      <column name="ultimo"/>
+    </property>
+    <property name="cuentatipo" type="string">
+      <column name="cuentatipo"/>
+    </property>
+    <property name="cuentanum" type="string">
+      <column name="cuentanum"/>
+    </property>
+    <property name="cuentaci" type="string">
+      <column name="cuentaci"/>
+    </property>
+    <property name="cuentadue" type="string">
+      <column name="cuentadue"/>
+    </property>
+    <property name="team" type="string">
+      <column name="team"/>
+    </property>
+    <property name="cliente" type="string">
+      <column name="cliente"/>
+    </property>
+    <property name="foto" type="string">
+      <column name="foto"/>
+    </property>
+    <property name="genero" type="java.lang.Character">
+      <column length="1" name="genero"/>
+    </property>
+    <property name="estadoCivil" type="java.lang.Character">
+      <column length="1" name="estado_civil"/>
+    </property>
+    <property name="pais" type="string">
+      <column name="pais"/>
+    </property>
+    <property name="ciudad" type="string">
+      <column name="ciudad"/>
+    </property>
+    <property name="estado" type="string">
+      <column name="estado"/>
+    </property>
+    <property name="cuidadResidencia" type="string">
+      <column name="cuidad_residencia"/>
+    </property>
+    <property name="direccion" type="string">
+      <column name="direccion"/>
+    </property>
+    <property name="telefono" type="string">
+      <column name="telefono"/>
+    </property>
+    <property name="celular" type="string">
+      <column name="celular"/>
+    </property>
+    <property name="cv" type="string">
+      <column name="cv"/>
+    </property>
+    <property name="dato1" type="string">
+      <column name="dato1"/>
+    </property>
+    <property name="dato2" type="string">
+      <column name="dato2"/>
+    </property>
+    <property name="dato3" type="string">
+      <column name="dato3"/>
+    </property>
+    <property name="dato4" type="string">
+      <column name="dato4"/>
+    </property>
+    <property name="departamento" type="string">
+        <column name="departamento" />
+    </property>
+    <property name="fondos" type="string">
+        <column name="fondos" />
+    </property>
+    <property name="perfilpuesto" type="string">
+        <column name="perfilpuesto" />
+    </property>
+    <property name="decimotercero" type="string">
+        <column name="decimotercero" />
+    </property>
+    <property name="decimocuarto" type="string">
+        <column name="decimocuarto" />
+    </property>
+    <property name="alimentacion" type="string">
+        <column name="alimentacion" />
+    </property>
+    <property name="actividades" type="string">
+        <column name="actividades" />
+    </property>
+    
+    <property name="fechaNacimiento" type="date">
+      <column length="13" name="fecha_nacimiento"/>
+    </property>
+    <property name="fechaIngreso" type="date">
+      <column length="13" name="fecha_ingreso"/>
+    </property>
+    <set name="departamentos" table="departamento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ci_jefe" />
+            </key>
+            <one-to-many class="rrhh.Entidad.Departamento" />
+        </set>
+        <set name="departamentos_1" table="departamento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ci_jefe" />
+            </key>
+            <one-to-many class="rrhh.Entidad.Departamento" />
+        </set>
+        <set name="deptEmpls" table="dept_empl" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cedula" />
+            </key>
+            <one-to-many class="rrhh.Entidad.DeptEmpl" />
+        </set>
+        <set name="deptEmpls_1" table="dept_empl" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cedula" />
+            </key>
+            <one-to-many class="rrhh.Entidad.DeptEmpl" />
+        </set>
+  </class>
+</hibernate-mapping>

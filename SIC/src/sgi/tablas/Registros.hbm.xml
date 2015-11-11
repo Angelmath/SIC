@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-sep-2015 12:32:53 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sgi.tablas.Registros" table="registros" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">registros_id_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="usuario" class="sgi.tablas.Usuario" fetch="select">
+            <column name="idusuario" />
+        </many-to-one>
+        <property name="inicioTiempo" type="timestamp">
+            <column name="inicio_tiempo" length="29" />
+        </property>
+        <property name="finTiempo" type="timestamp">
+            <column name="fin_tiempo" length="29" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" />
+        </property>
+        <property name="sync" type="string">
+            <column name="sync" />
+        </property>
+        <property name="actualizacion" type="string">
+            <column name="actualizacion" />
+        </property>
+        <property name="login" type="string">
+            <column name="login" />
+        </property>
+        <property name="localidad" type="string">
+            <column name="localidad" />
+        </property>
+        <property name="extra" type="string">
+            <column name="extra" />
+        </property>
+        <property name="cantidad" type="string">
+            <column name="cantidad" />
+        </property>
+        <property name="acreditacion" type="string">
+            <column name="acreditacion" />
+        </property>
+    </class>
+</hibernate-mapping>

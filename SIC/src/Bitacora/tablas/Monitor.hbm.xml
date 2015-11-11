@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/03/2015 16:39:49 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Bitacora.tablas.Monitor" table="monitor" schema="public">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="sequence">
+              <param name="sequence">monitor_id_seq</param>
+            </generator>
+        </id>
+        <property name="monitor" type="string">
+            <column name="monitor" length="50" />
+        </property>
+        <property name="usuario" type="string">
+            <column name="usuario" length="50" />
+        </property>
+        <property name="contrasenia" type="string">
+            <column name="contrasenia" length="50" />
+        </property>
+        <property name="ci" type="string">
+            <column name="ci" />
+        </property>
+        <set name="registroses" inverse="true">
+            <key>
+                <column name="id_monitor" />
+            </key>
+            <one-to-many class="Bitacora.tablas.Registros" />
+        </set>
+        <set name="asistencias" inverse="true">
+            <key>
+                <column name="id_monitor" />
+            </key>
+            <one-to-many class="Bitacora.tablas.Asistencia" />
+        </set>
+    </class>
+</hibernate-mapping>
