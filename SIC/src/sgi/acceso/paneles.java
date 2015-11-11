@@ -1958,8 +1958,12 @@ public final class paneles extends javax.swing.JFrame {
 <<<<<<< HEAD
 =======
         panel_guardia1 = new sgi.acceso.panel_guardia();
+<<<<<<< HEAD
 >>>>>>> parent of a70cb45... nuevo 1
         panel_rrhh1 = new sgi.acceso.panel_rrhh();
+=======
+        panel_rrhh1 = new sgi.acceso.panel_base();
+>>>>>>> a70cb45... nuevo 1
         panel_diseño1 = new sgi.acceso.panel_diseño();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2021,17 +2025,17 @@ public final class paneles extends javax.swing.JFrame {
         nav.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         nav.setLayout(null);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Estela", "Campamento", "Datacenter", "Kennedy" }));
         nav.add(jComboBox1);
         jComboBox1.setBounds(0, 20, 160, 40);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Ticket");
         nav.add(jButton1);
-        jButton1.setBounds(0, 530, 160, 40);
+        jButton1.setBounds(0, 530, 150, 40);
 
-        jButton2.setText("jButton1");
+        jButton2.setText("Contacto");
         nav.add(jButton2);
-        jButton2.setBounds(0, 480, 160, 40);
+        jButton2.setBounds(0, 480, 150, 40);
 
         getContentPane().add(nav);
         nav.setBounds(0, 60, 190, 590);
@@ -3907,8 +3911,12 @@ public final class paneles extends javax.swing.JFrame {
 <<<<<<< HEAD
 =======
     private sgi.acceso.panel_guardia panel_guardia1;
+<<<<<<< HEAD
 >>>>>>> parent of a70cb45... nuevo 1
     private sgi.acceso.panel_rrhh panel_rrhh1;
+=======
+    private sgi.acceso.panel_base panel_rrhh1;
+>>>>>>> a70cb45... nuevo 1
     // End of variables declaration//GEN-END:variables
     
 }
