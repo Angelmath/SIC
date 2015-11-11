@@ -12,12 +12,12 @@ import javax.swing.JScrollPane;
  *
  * @author Matheus
  */
-public class panel_diseño extends javax.swing.JPanel {
+public class panel_rrhh extends javax.swing.JPanel {
 
     /**
-     * Creates new form panel_diseño
+     * Creates new form panel_rrhh
      */
-    public panel_diseño() {
+    public panel_rrhh() {
         initComponents();
     }
 
@@ -48,8 +48,6 @@ public class panel_diseño extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-
-        setForeground(new java.awt.Color(255, 255, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
