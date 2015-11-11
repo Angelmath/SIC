@@ -5,6 +5,9 @@
  */
 package sgi.acceso;
 
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+
 /**
  *
  * @author Matheus
@@ -19,6 +22,22 @@ public class panel_guardia extends javax.swing.JPanel {
         setVisible(true);
     }
 
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,18 +48,82 @@ public class panel_guardia extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-
-        setLayout(null);
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        panel_porperfil1 = new sgi.acceso.panel_porperfil();
+        panel_porperfil2 = new sgi.acceso.panel_porperfil();
+        panel_porperfil3 = new sgi.acceso.panel_porperfil();
 
         jLabel1.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("NUEVO");
-        add(jLabel1);
-        jLabel1.setBounds(20, 20, 320, 70);
+
+        setLayout(null);
+
+        javax.swing.GroupLayout panel_porperfil1Layout = new javax.swing.GroupLayout(panel_porperfil1);
+        panel_porperfil1.setLayout(panel_porperfil1Layout);
+        panel_porperfil1Layout.setHorizontalGroup(
+            panel_porperfil1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 398, Short.MAX_VALUE)
+        );
+        panel_porperfil1Layout.setVerticalGroup(
+            panel_porperfil1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panel_porperfil2Layout = new javax.swing.GroupLayout(panel_porperfil2);
+        panel_porperfil2.setLayout(panel_porperfil2Layout);
+        panel_porperfil2Layout.setHorizontalGroup(
+            panel_porperfil2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panel_porperfil2Layout.setVerticalGroup(
+            panel_porperfil2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panel_porperfil3Layout = new javax.swing.GroupLayout(panel_porperfil3);
+        panel_porperfil3.setLayout(panel_porperfil3Layout);
+        panel_porperfil3Layout.setHorizontalGroup(
+            panel_porperfil3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panel_porperfil3Layout.setVerticalGroup(
+            panel_porperfil3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panel_porperfil1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_porperfil2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_porperfil3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(panel_porperfil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panel_porperfil2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panel_porperfil3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jScrollPane1.setViewportView(jPanel1);
+
+        add(jScrollPane1);
+        jScrollPane1.setBounds(0, 0, 400, 300);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private sgi.acceso.panel_porperfil panel_porperfil1;
+    private sgi.acceso.panel_porperfil panel_porperfil2;
+    private sgi.acceso.panel_porperfil panel_porperfil3;
     // End of variables declaration//GEN-END:variables
 }
