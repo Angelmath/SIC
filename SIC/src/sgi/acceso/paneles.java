@@ -1162,7 +1162,6 @@ public final class paneles extends javax.swing.JFrame {
         public void visi(){
             
             
-            
         }
         
         @Override
