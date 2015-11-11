@@ -1180,39 +1180,11 @@ public final class paneles extends javax.swing.JFrame {
                 
                 visi();
                 
-                if(patrulla.isIni()){
-                    
- //                   patrulla.getjTextField4().setText(hora + ":" + minutos + ":" + segundos + " "+ampm);
-                    
-                    inicio1=(Integer.parseInt(hora));
-                    
-                    inicio2=(Integer.parseInt(minutos));
-                    
-                    inicio3=Integer.parseInt(segundos);
-                    
-                    dat.set(0, 0, 0, inicio1,inicio2, inicio3);
-                    
-                }
-                
-                if(patrulla.isFin()){
-                    
-//                    patrulla.getjTextField1().setText(hora + ":" + minutos + ":" + segundos + " "+ampm);
-                    
-                    fin1=(Integer.parseInt(hora));
-                    
-                    fin2=(Integer.parseInt(minutos));
-                    
-                    fin3=Integer.parseInt(segundos);
-                    
-                    dat2.set(0, 0, 0, fin1,fin2, fin3);
-                    
-                }
-                
                 dif.setTimeInMillis(dat2.getTimeInMillis()-dat.getTimeInMillis());
                 
 //                patrulla.getjLabel2().setText(dif.get(Calendar.HOUR)-7+" H :"+dif.get(Calendar.MINUTE)+" M :"+dif.get(Calendar.SECOND)+" S");
                 
-                observa.getjLabel2().setText(hora + ":" + minutos + ":" + segundos + " "+ampm);
+                    observa.getjLabel2().setText(hora + ":" + minutos + ":" + segundos + " "+ampm);
                 try {
                     Thread.sleep(1000);
                 }catch(InterruptedException e) {}
