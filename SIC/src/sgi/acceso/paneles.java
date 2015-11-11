@@ -270,6 +270,8 @@ public final class paneles extends javax.swing.JFrame {
         panel_rrhh1.setLocation((d.width-60)-panel_guardia1.getWidth()*2, (d.height-60)-panel_guardia1.getHeight());
         panel_diseño1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight()*2);
         panel_busqueda1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight());  
+        panel_diseño1.getjLabel1().setSize((6*panel_diseño1.getWidth())/7, (6*panel_diseño1.getHeight())/7);
+        
         
     }
     
