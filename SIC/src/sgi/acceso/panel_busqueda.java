@@ -19,6 +19,7 @@ public class panel_busqueda extends javax.swing.JPanel {
      */
     public panel_busqueda() {
         initComponents();
+        setVisible(true);
     }
 
     public JScrollPane getjScrollPane1() {
@@ -48,17 +49,90 @@ public class panel_busqueda extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
-        );
+        jPanel1.setLayout(null);
+
+        jLabel1.setText("Placa:");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(10, 130, 108, 32);
+
+        jLabel2.setText("Fin:");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(260, 50, 80, 32);
+
+        jLabel3.setText("Apellido:");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(10, 50, 108, 32);
+
+        jLabel4.setText("Cedula:");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(10, 90, 108, 32);
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(120, 130, 130, 30);
+        jPanel1.add(jTextField2);
+        jTextField2.setBounds(120, 10, 130, 30);
+        jPanel1.add(jTextField3);
+        jTextField3.setBounds(120, 50, 130, 30);
+        jPanel1.add(jTextField4);
+        jTextField4.setBounds(120, 90, 130, 30);
+
+        jLabel5.setText("Nombre:");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(10, 11, 108, 32);
+
+        jLabel6.setText("Inicio:");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(260, 10, 80, 32);
+        jPanel1.add(jDateChooser1);
+        jDateChooser1.setBounds(340, 50, 140, 30);
+        jPanel1.add(jDateChooser2);
+        jDateChooser2.setBounds(340, 10, 140, 30);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Apellido", "Cedula", "Placa", "VER"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setRowHeight(25);
+        jScrollPane2.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(10, 180, 480, 402);
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -66,17 +140,31 @@ public class panel_busqueda extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
