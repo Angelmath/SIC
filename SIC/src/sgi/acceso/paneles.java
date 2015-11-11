@@ -1184,7 +1184,7 @@ public final class paneles extends javax.swing.JFrame {
                 
 //                patrulla.getjLabel2().setText(dif.get(Calendar.HOUR)-7+" H :"+dif.get(Calendar.MINUTE)+" M :"+dif.get(Calendar.SECOND)+" S");
                 
-                    observa.getjLabel2().setText(hora + ":" + minutos + ":" + segundos + " "+ampm);
+//                    observa.getjLabel2().setText(hora + ":" + minutos + ":" + segundos + " "+ampm);
                 try {
                     Thread.sleep(1000);
                 }catch(InterruptedException e) {}
