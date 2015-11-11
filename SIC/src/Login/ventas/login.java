@@ -6,7 +6,6 @@
 
 package Login.ventas;
 
-import Login.Entidad.Clientes;
 import Login.Entidad.Instalacion;
 import Login.Entidad.Login;
 import java.awt.Dimension;
@@ -24,9 +23,6 @@ import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import Login.servicio.ServiceHb;
 import java.util.Calendar;
-import javax.swing.JOptionPane;
-import rrhh.Entidad.Empleado;
-import rrhh.Entidad.Roles;
 import rrhh.sic_rrhh.JavaMail;
 
 /**
@@ -257,7 +253,9 @@ public class login extends javax.swing.JFrame {
 //        
 //        }
         try {
-            logeo();
+            //logeo();
+            sgi.acceso.paneles cuadro = new sgi.acceso.paneles(null, null, null, null, null, null);
+            dispose();
         } catch (Exception ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -5,7 +5,6 @@
 package Login.ventas;
 
 
-import Bitacora.tablas.Monitor;
 import Login.Entidad.Noticalen;
 import Login.Entidad.Permisos;
 import Login.servicio.ServiceHb;
@@ -91,25 +90,6 @@ public class permisos extends javax.swing.JFrame {
                 public void mouseClicked(MouseEvent e) {
                     if(nombre.equalsIgnoreCase("bitacora")){
                         try {
-                            //                        List<Monitor> mn1 = null;
-//                        try{
-//                            Bitacora.servicio.ServiceHb helper = new Bitacora.servicio.ServiceHb();
-//                            helper.iniciarTransaccion();
-//                            mn1=helper.getMonitores();
-//                            helper.cerrarSesion();
-//                        }catch(Exception io){
-//
-//                        }
-//                        for(Monitor i: mn1){
-//                            if(i.getCi().equalsIgnoreCase(cedula)){
-//                                try{
-//                                    Bitacora.acceso.Cuadro cuadro = new Bitacora.acceso.Cuadro(i,"","",log.getDireccion());
-//                                    dispose();
-//                                }catch(FontFormatException | DocumentException io){
-//                                }
-//                            }
-//                        }
-                            
                             sgi.acceso.paneles cuadro = new sgi.acceso.paneles(null, null, null, null, null, null);
                             dispose();
                             

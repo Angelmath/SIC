@@ -16,6 +16,7 @@ public class panel_guardia extends javax.swing.JPanel {
      */
     public panel_guardia() {
         initComponents();
+        setVisible(true);
     }
 
     /**
@@ -27,10 +28,19 @@ public class panel_guardia extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+
         setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("NUEVO");
+        add(jLabel1);
+        jLabel1.setBounds(20, 20, 320, 70);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
