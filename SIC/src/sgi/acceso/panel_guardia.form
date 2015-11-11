@@ -45,6 +45,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Component id="panel_porperfil1" min="-2" max="-2" attributes="0"/>
                   <Component id="panel_porperfil2" min="-2" max="-2" attributes="0"/>
                   <Component id="panel_porperfil3" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -58,12 +59,18 @@
                   <Component id="panel_porperfil2" min="-2" max="-2" attributes="0"/>
                   <Component id="panel_porperfil3" alignment="0" min="-2" max="-2" attributes="0"/>
 >>>>>>> parent of a2f622a... Revert "Revert "nuevo 1""
+=======
+                  <Component id="panel_porperfil1" min="-2" max="-2" attributes="0"/>
+                  <Component id="panel_porperfil2" min="-2" max="-2" attributes="0"/>
+                  <Component id="panel_porperfil3" alignment="0" min="-2" max="-2" attributes="0"/>
+>>>>>>> parent of a70cb45... nuevo 1
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="panel_porperfil1" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       <EmptySpace max="32767" attributes="0"/>
@@ -84,6 +91,13 @@
                       <Component id="panel_porperfil3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
 >>>>>>> parent of a2f622a... Revert "Revert "nuevo 1""
+=======
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="panel_porperfil2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="panel_porperfil3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+>>>>>>> parent of a70cb45... nuevo 1
                   </Group>
               </Group>
             </DimensionLayout>
