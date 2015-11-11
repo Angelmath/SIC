@@ -256,6 +256,14 @@ public final class paneles extends javax.swing.JFrame {
         nav.setSize(160, d.height-60);
         panel_busqueda1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
         panel_diseño1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_diseño1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
+        panel_busqueda1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
+        panel_guardia1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
+        panel_rrhh1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
+        panel_busqueda1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
+        panel_diseño1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
+        panel_guardia1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
+        panel_rrhh1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
         panel_guardia1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
         panel_rrhh1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
         panel_guardia1.setLocation((d.width-60)-panel_guardia1.getWidth()*2,(d.height-60)-panel_guardia1.getHeight()*2);
