@@ -1955,6 +1955,10 @@ public final class paneles extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         panel_busqueda1 = new sgi.acceso.panel_busqueda();
+<<<<<<< HEAD
+=======
+        panel_guardia1 = new sgi.acceso.panel_guardia();
+>>>>>>> parent of a70cb45... nuevo 1
         panel_rrhh1 = new sgi.acceso.panel_rrhh();
         panel_diseño1 = new sgi.acceso.panel_diseño();
 
@@ -3900,6 +3904,10 @@ public final class paneles extends javax.swing.JFrame {
     private javax.swing.JPanel nav;
     private sgi.acceso.panel_busqueda panel_busqueda1;
     private sgi.acceso.panel_diseño panel_diseño1;
+<<<<<<< HEAD
+=======
+    private sgi.acceso.panel_guardia panel_guardia1;
+>>>>>>> parent of a70cb45... nuevo 1
     private sgi.acceso.panel_rrhh panel_rrhh1;
     // End of variables declaration//GEN-END:variables
     
