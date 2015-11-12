@@ -258,19 +258,19 @@ public final class paneles extends javax.swing.JFrame {
         panel_diseño1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
         panel_diseño1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
         panel_busqueda1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
-//        panel_guardia1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
+        panel_guardia1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
         panel_rrhh1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
         panel_busqueda1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
         panel_diseño1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
-//        panel_guardia1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
+        panel_guardia1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
         panel_rrhh1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
-//        panel_guardia1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_guardia1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
         panel_rrhh1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
-//        panel_guardia1.setLocation((d.width-60)-panel_guardia1.getWidth()*2,(d.height-60)-panel_guardia1.getHeight()*2);
-//        panel_rrhh1.setLocation((d.width-60)-panel_guardia1.getWidth()*2, (d.height-60)-panel_guardia1.getHeight());
- //       panel_diseño1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight()*2);
- //       panel_busqueda1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight());  
-//        panel_diseño1.getjLabel1().setSize((6*panel_diseño1.getWidth())/7, (6*panel_diseño1.getHeight())/7);
+        panel_guardia1.setLocation((d.width-60)-panel_guardia1.getWidth()*2,(d.height-60)-panel_guardia1.getHeight()*2);
+        panel_rrhh1.setLocation((d.width-60)-panel_guardia1.getWidth()*2, (d.height-60)-panel_guardia1.getHeight());
+        panel_diseño1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight()*2);
+        panel_busqueda1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight());  
+        panel_diseño1.getjLabel1().setSize((6*panel_diseño1.getWidth())/7, (6*panel_diseño1.getHeight())/7);
         
         
     }
@@ -1955,15 +1955,8 @@ public final class paneles extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         panel_busqueda1 = new sgi.acceso.panel_busqueda();
-<<<<<<< HEAD
-=======
         panel_guardia1 = new sgi.acceso.panel_guardia();
-<<<<<<< HEAD
->>>>>>> parent of a70cb45... nuevo 1
-        panel_rrhh1 = new sgi.acceso.panel_rrhh();
-=======
         panel_rrhh1 = new sgi.acceso.panel_base();
->>>>>>> a70cb45... nuevo 1
         panel_diseño1 = new sgi.acceso.panel_diseño();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2055,6 +2048,22 @@ public final class paneles extends javax.swing.JFrame {
 
         getContentPane().add(panel_busqueda1);
         panel_busqueda1.setBounds(560, 320, 370, 260);
+
+        panel_guardia1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout panel_guardia1Layout = new javax.swing.GroupLayout(panel_guardia1);
+        panel_guardia1.setLayout(panel_guardia1Layout);
+        panel_guardia1Layout.setHorizontalGroup(
+            panel_guardia1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 368, Short.MAX_VALUE)
+        );
+        panel_guardia1Layout.setVerticalGroup(
+            panel_guardia1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 258, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(panel_guardia1);
+        panel_guardia1.setBounds(190, 60, 370, 260);
 
         panel_rrhh1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -3908,15 +3917,8 @@ public final class paneles extends javax.swing.JFrame {
     private javax.swing.JPanel nav;
     private sgi.acceso.panel_busqueda panel_busqueda1;
     private sgi.acceso.panel_diseño panel_diseño1;
-<<<<<<< HEAD
-=======
     private sgi.acceso.panel_guardia panel_guardia1;
-<<<<<<< HEAD
->>>>>>> parent of a70cb45... nuevo 1
-    private sgi.acceso.panel_rrhh panel_rrhh1;
-=======
     private sgi.acceso.panel_base panel_rrhh1;
->>>>>>> a70cb45... nuevo 1
     // End of variables declaration//GEN-END:variables
     
 }

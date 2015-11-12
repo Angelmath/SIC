@@ -202,8 +202,6 @@
         </DimensionLayout>
       </Layout>
     </Container>
-<<<<<<< HEAD
-=======
     <Container class="sgi.acceso.panel_guardia" name="panel_guardia1">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -231,12 +229,7 @@
         </DimensionLayout>
       </Layout>
     </Container>
-<<<<<<< HEAD
->>>>>>> parent of a70cb45... nuevo 1
-    <Container class="sgi.acceso.panel_rrhh" name="panel_rrhh1">
-=======
     <Container class="sgi.acceso.panel_base" name="panel_rrhh1">
->>>>>>> a70cb45... nuevo 1
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
