@@ -151,7 +151,7 @@ public class ServiceHb {
     
     public Empleado getPersonasCid2(String ci) throws Exception {
         List<Empleado> lista;
-        Query q = session.createQuery("FROM Empleado WHERE ci='"+ci+"'");
+        Query q = session.createQuery("FROM Empleado WHERE ci='"+ci+"' OR cid='"+ci+"'");
         lista = (List<Empleado>) q.list();
         if (lista.isEmpty()) {
             return null;

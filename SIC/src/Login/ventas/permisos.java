@@ -37,7 +37,7 @@ public class permisos extends javax.swing.JFrame {
      * Creates new form permisos
      * @param log
      */
-    public permisos(final Login.Entidad.Login log) {
+    public permisos(Login.Entidad.Login log) {
         initComponents();
         dispose();
         this.log=log.getNombre();

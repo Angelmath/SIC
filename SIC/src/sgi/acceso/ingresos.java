@@ -4,7 +4,7 @@
  */
 package sgi.acceso;
 
-import tablas.Asistente;
+import sgi.tablas.Asistente;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Point;

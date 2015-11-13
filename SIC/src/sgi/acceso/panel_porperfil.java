@@ -5,6 +5,8 @@
  */
 package sgi.acceso;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author Matheus
@@ -19,6 +21,78 @@ public class panel_porperfil extends javax.swing.JPanel {
         setVisible(true);
     }
 
+    public JLabel getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(JLabel apellido) {
+        this.apellido = apellido;
+    }
+
+    public JLabel getContacto() {
+        return contacto;
+    }
+
+    public void setContacto(JLabel contacto) {
+        this.contacto = contacto;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(JLabel nombre) {
+        this.nombre = nombre;
+    }
+
+    public JLabel getPunto() {
+        return punto;
+    }
+
+    public void setPunto(JLabel punto) {
+        this.punto = punto;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,17 +105,18 @@ public class panel_porperfil extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        nombre = new javax.swing.JLabel();
+        apellido = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        punto = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        contacto = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(400, 150));
         setLayout(null);
 
-        jLabel1.setText("Foto");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         add(jLabel1);
         jLabel1.setBounds(10, 11, 101, 123);
 
@@ -53,41 +128,41 @@ public class panel_porperfil extends javax.swing.JPanel {
         add(jLabel3);
         jLabel3.setBounds(129, 44, 65, 21);
 
-        jLabel4.setText("Aquí va nombres");
-        add(jLabel4);
-        jLabel4.setBounds(204, 15, 150, 14);
+        nombre.setText("Aquí va nombres");
+        add(nombre);
+        nombre.setBounds(204, 15, 220, 14);
 
-        jLabel5.setText("Aquí va apellidos");
-        add(jLabel5);
-        jLabel5.setBounds(204, 44, 150, 21);
+        apellido.setText("Aquí va apellidos");
+        add(apellido);
+        apellido.setBounds(204, 44, 220, 21);
 
         jLabel6.setText("Punto:");
         add(jLabel6);
         jLabel6.setBounds(129, 71, 65, 24);
 
-        jLabel7.setText("Aquí va el punto actual");
-        add(jLabel7);
-        jLabel7.setBounds(204, 71, 150, 24);
+        punto.setText("Aquí va el punto actual");
+        add(punto);
+        punto.setBounds(204, 71, 220, 24);
 
         jLabel8.setText("Contacto:");
         add(jLabel8);
         jLabel8.setBounds(129, 101, 65, 24);
 
-        jLabel9.setText("Aquí va el contacto");
-        add(jLabel9);
-        jLabel9.setBounds(204, 106, 119, 14);
+        contacto.setText("Aquí va el contacto");
+        add(contacto);
+        contacto.setBounds(204, 106, 190, 14);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel apellido;
+    private javax.swing.JLabel contacto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel nombre;
+    private javax.swing.JLabel punto;
     // End of variables declaration//GEN-END:variables
 }

@@ -56,6 +56,7 @@ public class panel_diseño extends javax.swing.JPanel {
         this.jLabel4 = jLabel4;
     }
 
+
     public JPanel getjPanel1() {
         return jPanel1;
     }
@@ -91,26 +92,17 @@ public class panel_diseño extends javax.swing.JPanel {
         setForeground(new java.awt.Color(255, 255, 0));
 
         jPanel1.setLayout(null);
-
-        jLabel1.setText("jLabel1");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(50, 34, 300, 240);
+        jLabel1.setBounds(0, 38, 398, 260);
 
-        jLabel2.setText("jLabel2");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("TITULO");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(90, 0, 210, 23);
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setOpaque(true);
+        jLabel2.setBounds(60, 0, 280, 40);
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(310, 0, 34, 20);
-
-        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setOpaque(true);
+        jLabel3.setBounds(0, 0, 60, 40);
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(50, 0, 34, 20);
+        jLabel4.setBounds(340, 0, 60, 40);
 
         jScrollPane1.setViewportView(jPanel1);
 

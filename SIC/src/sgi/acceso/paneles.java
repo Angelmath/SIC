@@ -33,6 +33,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -64,11 +65,11 @@ import javax.swing.table.JTableHeader;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.xml.bind.DatatypeConverter;
+import rrhh.Entidad.Empleado;
 import sgi.servicio.Funcion;
 import sgi.servicio.ServiceHb;
 import sgi.tablas.Acreditacion;
 import sgi.tablas.Foto;
-import sgi.tablas.Indexpatrulla;
 import sgi.tablas.Observacion;
 import sgi.tablas.Registros;
 import sgi.tablas.Usuario;
@@ -157,33 +158,147 @@ public final class paneles extends javax.swing.JFrame {
         initComponents();
         diseñosmarco();
         dispose();
-        
         setUndecorated(true);
-        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
         setResizable(true);
-        
         setLocationRelativeTo(null);
-        
-        //tablas();
-        
-        //eventos();
-        
         Hora hora1 = new Hora();
         hora2 = new Reloj();
-        //new Thread(new Cargando(1)).start();
-        
         JLabel jLabel4 = new JLabel();
         jLabel4.setSize(d.width-60, d.height-60);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesnew/fondo.jpg"))); // NOI18N
         jLabel4.setIcon(new ImageIcon(((ImageIcon) jLabel4.getIcon()).getImage().getScaledInstance(jLabel4.getWidth(), jLabel4.getHeight(), java.awt.Image.SCALE_DEFAULT)));
         add(jLabel4);
-        
+        Hilos h = new Hilos(1);
         setVisible(true);
-        
     }
     
+    public void foto(String ci, JLabel l){
+        try{
+            sgi.servicio.ServiceHb helper = new sgi.servicio.ServiceHb();
+            helper.iniciarTransaccion();
+            Foto foto = helper.getfotoCi(ci);
+            helper.cerrarSesion();
+            if(foto!=null){
+                try{
+                    byte[] decodedString = DatatypeConverter.parseBase64Binary(foto.getFoto());
+                    InputStream in = new ByteArrayInputStream(decodedString);
+                    BufferedImage bImageFromConvert = ImageIO.read(in);
+                    l.setIcon(new ImageIcon(bImageFromConvert.getScaledInstance(l.getHeight(), l.getWidth(), java.awt.Image.SCALE_SMOOTH)));
+                }catch(Exception io){
+                    l.setIcon(null);
+                }
+            }else{l.setIcon(null);}
+        }catch(Exception io){
+            System.out.println(io);
+        }
+    }
+    
+    public void llenar(){
+        String log1="919889006";
+        String log2="941640211";
+        String log3="924582885";
+        try{
+            int tam=0;
+            rrhh.servicio.ServiceHb helper = new rrhh.servicio.ServiceHb();
+            helper.iniciarTransaccion();
+            Empleado emp1 = helper.getPersonasCid2(log1);
+            if(emp1!=null){
+                tam++;
+                panel_porperfil p = new panel_porperfil();
+                Fotoimg t = new Fotoimg(1,p.getjLabel1(),log1);
+                p.getNombre().setText(emp1.getNombre1()+" "+emp1.getNombre2());
+                p.getApellido().setText(emp1.getApellido1()+" "+emp1.getApellido2());
+                p.getPunto().setText("Estela");
+                p.getContacto().setText(emp1.getTelefono()+ " "+ emp1.getCelular());
+                panel_guardia1.getjPanel1().add(p);
+                //p.setBounds(0, 0*150, 400, 150);
+            }
+            emp1 = helper.getPersonasCid2(log2);
+            if(emp1!=null){
+                tam++;
+                panel_porperfil p = new panel_porperfil();
+                Fotoimg t = new Fotoimg(1,p.getjLabel1(),log2);
+                p.getNombre().setText(emp1.getNombre1()+" "+emp1.getNombre2());
+                p.getApellido().setText(emp1.getApellido1()+" "+emp1.getApellido2());
+                p.getPunto().setText("Estela");
+                p.getContacto().setText(emp1.getTelefono()+ " "+ emp1.getCelular());
+                panel_guardia1.getjPanel1().add(p);
+                //p.setBounds(0, 1*150, 400, 150);
+            }
+            emp1 = helper.getPersonasCid2(log3);
+            if(emp1!=null){
+                tam++;
+                panel_porperfil p = new panel_porperfil();
+                Fotoimg t = new Fotoimg(1,p.getjLabel1(),log3);
+                p.getNombre().setText(emp1.getNombre1()+" "+emp1.getNombre2());
+                p.getApellido().setText(emp1.getApellido1()+" "+emp1.getApellido2());
+                p.getPunto().setText("Estela");
+                p.getContacto().setText(emp1.getTelefono()+ " "+ emp1.getCelular());
+                panel_guardia1.getjPanel1().add(p);
+                //p.setBounds(0, 2*150, 400, 150);
+            }
+            panel_porperfil p = new panel_porperfil();
+            //panel_guardia1.getjPanel1().setSize(panel_guardia1.getjPanel1().getWidth(), p.getHeight()*tam);
+            System.out.println("XD");
+            helper.cerrarSesion();
+        }catch(Exception io){}
+    }
+    
+    public class Hilos implements Runnable{
+        Thread hilox;
+        int turnox=0;
+        public Hilos(int turno) {
+            this.turnox=turno;
+            hilox = new Thread(this);
+            hilox.start();
+        }
+        
+        
+        @Override
+        public void run() {
+            try {
+                if(turnox==1){
+                    ImageIcon imageIcon = new javax.swing.ImageIcon(getClass().getResource("/sgi/imagenes/cargando.gif"));
+                    panel_guardia1.getjLabel2().setIcon(imageIcon);
+                    imageIcon.setImageObserver(panel_guardia1.getjLabel2()); 
+                    llenar();
+                    imageIcon =null;
+                    panel_guardia1.getjLabel2().setIcon(null);
+                }
+            }catch(Exception e) {}   
+        }
+    }
+    
+    public class Fotoimg implements Runnable{
+        Thread hilox;
+        int turnox=0;
+        String search="";
+        JLabel labe=null;
+        public Fotoimg(int turno, JLabel labe,String search) {
+            this.turnox=turno;
+            this.labe=labe;
+            this.search=search;
+            hilox = new Thread(this);
+            hilox.start();
+        }
+        @Override
+        public void run() {
+            try {
+                if(turnox==1){
+                    ImageIcon imageIcon = new javax.swing.ImageIcon(getClass().getResource("/sgi/imagenes/cargando.gif"));
+                    //labe.setIcon(new ImageIcon(imageIcon.getImage().getScaledInstance(labe.getWidth(), labe.getHeight(), java.awt.Image.SCALE_SMOOTH)));
+                    labe.setIcon(imageIcon);
+                    imageIcon.setImageObserver(labe); 
+                    foto(search, labe);
+                    //imageIcon =null;
+                    //labe.setIcon(null);
+                }
+            }catch(Exception e) {
+                System.out.println(e);
+            }    
+        }
+    }
     
     public void eventos(){
         
@@ -254,23 +369,30 @@ public final class paneles extends javax.swing.JFrame {
         jLabel15.setText(/*moni1.getNombre()*/"");
         jLabel17.setLocation(((d.width-60)) - (jLabel17.getWidth()), jLabel17.getY());
         nav.setSize(160, d.height-60);
+        
         panel_busqueda1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_busqueda1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
+        panel_busqueda1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
+        panel_busqueda1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight());  
+        
+        panel_guardia1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
+        panel_guardia1.getjLabel2().setPreferredSize(new Dimension(panel_busqueda1.getWidth(), panel_busqueda1.getHeight()));
+        panel_guardia1.getjLabel2().setSize(new Dimension(panel_busqueda1.getWidth(), panel_busqueda1.getHeight()));
+        panel_guardia1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_guardia1.setLocation((d.width-60)-panel_guardia1.getWidth()*2,(d.height-60)-panel_guardia1.getHeight()*2);
+        
+        panel_base1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
+        panel_base1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
+        panel_base1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
+        panel_base1.setLocation((d.width-60)-panel_guardia1.getWidth()*2, (d.height-60)-panel_guardia1.getHeight());
+        
+        panel_diseño1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight()*2);
+        panel_diseño1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth(), panel_busqueda1.getHeight()));
         panel_diseño1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
         panel_diseño1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
-        panel_busqueda1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
-        panel_guardia1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
-        panel_base1.getjScrollPane1().setSize(panel_busqueda1.getWidth(), panel_busqueda1.getHeight());
-        panel_busqueda1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
-        panel_diseño1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
-        panel_guardia1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
-        panel_base1.getjPanel1().setPreferredSize(new Dimension(panel_busqueda1.getWidth()*2, panel_busqueda1.getHeight()*2));
-        panel_guardia1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
-        panel_base1.setSize((d.width-220)/2, ((d.height-60)-(jLabel1.getHeight()))/2);
-        panel_guardia1.setLocation((d.width-60)-panel_guardia1.getWidth()*2,(d.height-60)-panel_guardia1.getHeight()*2);
-        panel_base1.setLocation((d.width-60)-panel_guardia1.getWidth()*2, (d.height-60)-panel_guardia1.getHeight());
-        panel_diseño1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight()*2);
-        panel_busqueda1.setLocation((d.width-60)-panel_guardia1.getWidth(), (d.height-60)-panel_guardia1.getHeight());  
-        panel_diseño1.getjLabel1().setSize((6*panel_diseño1.getWidth())/7, (6*panel_diseño1.getHeight())/7);
+        
+        
+        //panel_diseño1.getjLabel1().setSize((6*panel_diseño1.getWidth())/7, (6*panel_diseño1.getHeight())/7);
         
         
     }
@@ -3099,7 +3221,7 @@ public final class paneles extends javax.swing.JFrame {
         ca2= direccion+cad+ca1+".pdf";
         ficheroPdf = new FileOutputStream(ca2);
         writer= PdfWriter.getInstance(documento,ficheroPdf);
-        }catch (Exception ex){
+        }catch (FileNotFoundException | DocumentException ex){
             System.out.println(ex.toString());
         }
         ServiceHb helper=null;

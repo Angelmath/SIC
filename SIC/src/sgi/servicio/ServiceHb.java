@@ -4,7 +4,7 @@
  */
 package sgi.servicio;
 
-import tablas.Asistente;
+import sgi.tablas.Asistente;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -317,7 +317,7 @@ public class ServiceHb {
     }
     public Foto getfotoCi(String cedula) throws Exception {
         List<Foto> lista;
-        Query q = session.createQuery("FROM Foto WHERE usuario='"+cedula+"' AND nombre='rostro'");
+        Query q = session.createQuery("FROM Foto WHERE usuario LIKE '%"+cedula+"%' AND nombre='rostro'");
         lista = (List<Foto>) q.list();
         if (lista.isEmpty()) {
             return null;

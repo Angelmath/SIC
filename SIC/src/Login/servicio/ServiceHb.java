@@ -169,6 +169,18 @@ public class ServiceHb {
         
         return session.get(o, serie);
     }
+    
+    public List<Login> getlog(String user, String pass) throws Exception {
+        List<Login> lista;
+        Query q = session.createQuery("FROM Login WHERE usuario='"+user+"' AND pass='"+pass+"'");
+        lista = (List<Login>) q.list();
+        if (lista.isEmpty()) {
+            return null;
+        } else {
+            return lista;
+        }
+    }
+    
     public List<Login> getlistaUsuarios() throws Exception {
         List<Login> lista;
         Query q = session.createQuery("FROM Login");

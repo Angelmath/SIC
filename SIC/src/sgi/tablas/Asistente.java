@@ -1,4 +1,4 @@
-package tablas;
+package sgi.tablas;
 // Generated 21-sep-2015 12:32:52 by Hibernate Tools 4.3.1
 
 

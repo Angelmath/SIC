@@ -194,14 +194,9 @@ public class login extends javax.swing.JFrame {
         user = getjTextField1().getText();
         try {
             helper.iniciarTransaccion();
-            usuario=helper.getlistaUsuarios();
-            
-            
-            } catch (Exception ex) {
-                Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            for(Login i: usuario){
-                if(i.getUsuario().equalsIgnoreCase(user)&&i.getPass().equalsIgnoreCase(password)){
+            usuario=helper.getlog(user,password);
+            if(usuario!=null){
+                for(Login i: usuario){
                     if(i.getUsuario().equalsIgnoreCase("Antonio Jurado")){
                         Calendar ca = Calendar.getInstance();
                         ca.add(Calendar.DAY_OF_YEAR, 15);
@@ -220,7 +215,9 @@ public class login extends javax.swing.JFrame {
                 }
             }
             helper.cerrarSesion();
-        
+        } catch (Exception ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
         getjLabel4().setText("Error de Usuario o Contraseña");
     }
 
